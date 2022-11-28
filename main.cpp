@@ -14,7 +14,7 @@
  * @return état d'execution (0 si OK)
  */
 int main(int argc, const char* argv[]) {
-    verif_arguments(argc, argv);
+    traitement_arguments(argc, argv);
     dico_test_prof();
     return 0;
 }
