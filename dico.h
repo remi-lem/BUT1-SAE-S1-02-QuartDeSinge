@@ -16,6 +16,6 @@ enum {
     ERR_OUVERTURE_DICO
 };
 
-void dico_test_prof();
+void fonc_prof_dico_test();
 
 #endif //BUT1_SAE_S1_02_DICO_H

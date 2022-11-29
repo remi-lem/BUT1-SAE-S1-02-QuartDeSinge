@@ -1,9 +1,10 @@
 //
 // Created by remi on 28/11/22.
 //
+
 #include "dico.h"
 
-void dico_test_prof() {
+void fonc_prof_dico_test() {
     ifstream in("../ods4.txt"); // on ouvre le fichier
     if (!in) {
         cout << "le dictionnaire n'a pu etre ouvert" << endl;

@@ -15,7 +15,9 @@
  * @return état d'execution (0 si OK)
  */
 int main(int argc, const char* argv[]) {
-    traitement_arguments(argc, argv);
-    dico_test_prof();
+    Joueurs struct_joueurs;
+    fonc_prof_traitement_arguments(argc, argv);
+    traitement_arguments(argc, argv, struct_joueurs);
+    fonc_prof_dico_test();
     return 0;
 }
