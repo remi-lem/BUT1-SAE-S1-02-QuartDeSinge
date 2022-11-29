@@ -1,16 +1,7 @@
 //
 // Created by remi on 28/11/22.
 //
-#include <iostream>
-#include <fstream> // pour ifstream
-#include <iomanip> // pour setw
-#include <cstring>
-
-using namespace std;
-
-enum {
-    ERR_OUVERTURE_DICO
-};
+#include "dico.h"
 
 void dico_test_prof() {
     ifstream in("../ods4.txt"); // on ouvre le fichier

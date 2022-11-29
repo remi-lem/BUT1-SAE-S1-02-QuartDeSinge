@@ -2,7 +2,8 @@
 // Created by remi on 28/11/22.
 //
 
-#include "proto_fonc.h"
+#include "joueurs.h"
+#include "dico.h"
 
 /*
    argc -> nombre de paramètres sur la ligne de commande (+ 1)

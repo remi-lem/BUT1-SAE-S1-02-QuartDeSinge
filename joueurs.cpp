@@ -2,10 +2,7 @@
 // Created by remi on 28/11/22.
 //
 
-#include <iostream>
-#include <cstring>
-
-using namespace std;
+#include "joueurs.h"
 
 /**
  * @brief Récupération du paramètre en ligne de commande
