@@ -33,6 +33,6 @@ int main(int argc, const char* argv[]) {
         case(CORRECT):
             lancement_partie(struct_joueurs);
     }
-    //fonc_prof_dico_test();
+    fonc_prof_dico_test();
     return 0;
 }

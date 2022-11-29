@@ -5,6 +5,9 @@
 #ifndef BUT1_SAE_S1_02_DICO_H
 #define BUT1_SAE_S1_02_DICO_H
 
+/*Remi : problème d'emplacement de l'executable*/
+#define HOME_DICO "../ods4.txt"
+
 #include <iostream>
 #include <fstream> // pour ifstream
 #include <iomanip> // pour setw

@@ -5,7 +5,7 @@
 #include "dico.h"
 
 void fonc_prof_dico_test() {
-    ifstream in("../ods4.txt"); // on ouvre le fichier
+    ifstream in(HOME_DICO); // on ouvre le fichier
     if (!in) {
         cout << "le dictionnaire n'a pu etre ouvert" << endl;
     }
