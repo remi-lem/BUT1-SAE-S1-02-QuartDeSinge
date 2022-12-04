@@ -12,9 +12,16 @@ using namespace std;
 
 typedef unsigned int uint;
 
+struct PointsSinge {
+    float pointsDeSinge = 00.00f;
+};
+
 struct Joueurs {
-    uint nb_humains;
-    uint nb_robots;
+    uint nb_humains = 0;
+    uint nb_robots = 0;
+    uint nb_total = 0;
+    char* ordre_passage = NULL;
+    PointsSinge* pointsSingeJoueur = NULL;
 };
 
 enum {

@@ -4,7 +4,7 @@
 
 #include "joueurs.h"
 #include "dico.h"
-#include "manche.h"
+#include "partie.h"
 
 /*
    argc -> nombre de paramètres sur la ligne de commande (+ 1)

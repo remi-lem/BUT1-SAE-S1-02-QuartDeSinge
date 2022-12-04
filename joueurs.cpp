@@ -30,25 +30,42 @@ void fonc_prof_traitement_arguments(int argc, const char* argv[]) {
     cout << cpt_humain << " humain(s) et " << cpt_robot << " robot(s)" << endl;
 }
 
-void initialiser_struct_joueurs(Joueurs &struct_joueurs) {
+void initialiser_struct_joueurs(Joueurs &struct_joueurs, uint taille_char_args) {
     struct_joueurs.nb_robots = 0;
     struct_joueurs.nb_humains = 0;
+    struct_joueurs.nb_total = 0;
+    struct_joueurs.ordre_passage = new char[taille_char_args];
+    struct_joueurs.pointsSingeJoueur = new PointsSinge[taille_char_args];
+    for(uint i=0; i<taille_char_args; i++) {
+        struct_joueurs.pointsSingeJoueur[i].pointsDeSinge = 00.00f;
+    }
 }
 
 
 int traitement_arguments(int argc, const char* argv[], Joueurs& struct_joueurs) {
-    initialiser_struct_joueurs(struct_joueurs);
+    uint taille_char_args = strlen(argv[1]);
     uint cpt_humain=0, cpt_robot=0;
+    initialiser_struct_joueurs(struct_joueurs, taille_char_args);
     if (argc >= 2) {
         for (uint i = 0; i < strlen(argv[1]); i++) {
-            if (argv[1][i] == 'H') {
-                cpt_humain++;
-            }
-            else if (argv[1][i] == 'R') {
-                cpt_robot++;
-            }
-            else {
-                return JOUEUR_NI_H_NI_R;
+            switch(argv[1][i]) {
+                case('H'):
+                    cpt_humain++;
+                    struct_joueurs.ordre_passage[i] = 'H';
+                    break;
+                case('h'):
+                    cpt_humain++;
+                    struct_joueurs.ordre_passage[i] = 'H';
+                    break;
+                case('R'):
+                    cpt_robot++;
+                    struct_joueurs.ordre_passage[i] = 'R';
+                    break;
+                case('r'):
+                    cpt_robot++;
+                    struct_joueurs.ordre_passage[i] = 'R';
+                default:
+                    return JOUEUR_NI_H_NI_R;
             }
         }
     }
@@ -61,5 +78,6 @@ int traitement_arguments(int argc, const char* argv[], Joueurs& struct_joueurs) 
 
     struct_joueurs.nb_humains = cpt_humain;
     struct_joueurs.nb_robots = cpt_robot;
+    struct_joueurs.nb_total = cpt_humain + cpt_robot;
     return CORRECT;
 }
