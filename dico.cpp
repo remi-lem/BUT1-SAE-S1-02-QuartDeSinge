@@ -24,10 +24,17 @@ void fonc_prof_dico_test() {
     cout << nb << " mots de " << (float)longueur / nb << " car. en moyenne" << endl;
 }
 
-bool recherche_existence_mot(char mot_manche[]) {
+bool recherche_existence_mot(const char mot[]) {
     // A FAIRE
+    return true;
 }
 
-char choix_lettre_robot(char mot_manche[]) {
+char choix_lettre_robot(const char mot[]) {
     // A FAIRE
+    return 'N';
+}
+
+bool le_mot_peut_continuer(const char mot[]) {
+    // A FAIRE
+    return true;
 }

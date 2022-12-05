@@ -23,7 +23,7 @@ int traitement_arguments(const int argc, const char* argv[], Joueurs& struct_jou
     initialiser_struct_joueurs(struct_joueurs, taille_char_args);
     if (argc >= 2) {
         for (uint i = 0; i < strlen(argv[1]); i++) {
-            lettre_arg = toupper(argv[1][i]);
+            lettre_arg = (char)toupper(argv[1][i]);
             switch(lettre_arg) {
                 case('H'):
                     cpt_humain++;
@@ -49,4 +49,14 @@ int traitement_arguments(const int argc, const char* argv[], Joueurs& struct_jou
     struct_joueurs.nb_robots = cpt_robot;
     struct_joueurs.nb_total = cpt_humain + cpt_robot;
     return CORRECT;
+}
+
+uint indice_joueur_precedent(Joueurs& struct_joueurs, uint indice_joueur) {
+    if(indice_joueur==0) {
+        return struct_joueurs.nb_total-1;
+    }
+    else if(indice_joueur >= 1) {
+        return indice_joueur-1;
+    }
+    return -1;
 }

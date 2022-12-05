@@ -17,9 +17,17 @@
 void lancement_manche(Joueurs& struct_joueurs);
 
 /**
+ * Verification du joueur perdant et attribution des points quart de singe
+ * @param struct_joueurs une référence vers la structure des joueurs
+ * @param mot_manche le mot de la manche actuelle
+ * @param indice_joueur l'indice du joueur concerné
+ */
+void verifie_qui_perd(Joueurs& struct_joueurs, const char mot_propose[], const uint indice_joueur);
+
+/**
  * @brief ajoute un quart de point (quart de singe) à un joueur
  * @param struct_joueurs une référence vers la structure des joueurs
- * @param indice l'indice du joueur qui doit avoit un quart de point supplémentaire
+ * @param indice l'indice du joueur qui doit recevoir un quart de point supplémentaire
  */
 void addQuartDeSinge(Joueurs& struct_joueurs, const uint indice);
 

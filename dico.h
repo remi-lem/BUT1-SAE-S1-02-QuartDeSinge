@@ -28,13 +28,20 @@ enum {
  * @param mot_manche
  * @return
  */
-bool recherche_existence_mot(char mot_manche[]);
+bool recherche_existence_mot(const char mot[]);
 
 /**
  * DOC A FAIRE
  * @param mot_manche
  * @return
  */
-char choix_lettre_robot(char mot_manche[]);
+char choix_lettre_robot(const char mot[]);
+
+/**
+ * DOC A FAIRE
+ * @param mot_manche
+ * @return
+ */
+bool le_mot_peut_continuer(const char mot[]);
 
 #endif //BUT1_SAE_S1_02_DICO_H
