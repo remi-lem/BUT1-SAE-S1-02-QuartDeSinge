@@ -21,4 +21,6 @@ enum {
 
 void fonc_prof_dico_test();
 
+char choix_lettre_robot(char mot_manche[26]);
+
 #endif //BUT1_SAE_S1_02_DICO_H

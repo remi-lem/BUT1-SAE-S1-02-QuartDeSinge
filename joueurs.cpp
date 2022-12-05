@@ -45,15 +45,13 @@ void initialiser_struct_joueurs(Joueurs &struct_joueurs, uint taille_char_args) 
 int traitement_arguments(int argc, const char* argv[], Joueurs& struct_joueurs) {
     uint taille_char_args = strlen(argv[1]);
     uint cpt_humain=0, cpt_robot=0;
+    char lettre_arg = ' ';
     initialiser_struct_joueurs(struct_joueurs, taille_char_args);
     if (argc >= 2) {
         for (uint i = 0; i < strlen(argv[1]); i++) {
-            switch(argv[1][i]) {
+            lettre_arg = toupper(argv[1][i]);
+            switch(lettre_arg) {
                 case('H'):
-                    cpt_humain++;
-                    struct_joueurs.ordre_passage[i] = 'H';
-                    break;
-                case('h'):
                     cpt_humain++;
                     struct_joueurs.ordre_passage[i] = 'H';
                     break;
@@ -61,9 +59,6 @@ int traitement_arguments(int argc, const char* argv[], Joueurs& struct_joueurs) 
                     cpt_robot++;
                     struct_joueurs.ordre_passage[i] = 'R';
                     break;
-                case('r'):
-                    cpt_robot++;
-                    struct_joueurs.ordre_passage[i] = 'R';
                 default:
                     return JOUEUR_NI_H_NI_R;
             }

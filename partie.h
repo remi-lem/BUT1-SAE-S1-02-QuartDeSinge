@@ -5,6 +5,8 @@
 #ifndef BUT1_SAE_S1_02_PARTIE_H
 #define BUT1_SAE_S1_02_PARTIE_H
 
+#include <cstring>
+
 #include "joueurs.h"
 
 enum {
@@ -12,9 +14,13 @@ enum {
     PT_SINGE_OK = -1
 };
 
-void aff_points_singe(Joueurs& struct_joueurs);
+enum {
+    MAX_LETTRES_MOT = 25
+};
 
-int verif_points_singe(Joueurs& struct_joueurs);
+void aff_points_singe(const Joueurs& struct_joueurs);
+
+int verif_points_singe(const Joueurs& struct_joueurs);
 
 /**
  * @brief Lance une partie
@@ -23,5 +29,7 @@ int verif_points_singe(Joueurs& struct_joueurs);
 void lancement_partie(Joueurs& struct_joueurs);
 
 void lancement_manche(Joueurs& struct_joueurs);
+
+void addQuartDeSinge(Joueurs& struct_joueurs, const uint indice);
 
 #endif //BUT1_SAE_S1_02_PARTIE_H
