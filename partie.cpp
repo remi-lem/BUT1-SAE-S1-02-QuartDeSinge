@@ -17,7 +17,8 @@ void lancement_partie(Joueurs& struct_joueurs) {
 void lancement_manche(Joueurs& struct_joueurs) {
     char lettre_joueur = ' ';
     char mot_manche[MAX_LETTRES_MOT+1] = "";
-    bool existence_mot = true;
+    bool existence_mot = false;
+    uint ind_joueur_perdant;
     for(uint h=0; h<MAX_LETTRES_MOT; h++) {
         for (uint i = 0; i < struct_joueurs.nb_total; i++) {
             cout << i + 1 << struct_joueurs.ordre_passage[i] << ", (";
@@ -44,9 +45,15 @@ void lancement_manche(Joueurs& struct_joueurs) {
                     return;
                 }
                 if(!existence_mot) {
-                    cout << "le mot " << mot_manche << " n’existe pas, " << i+1 << struct_joueurs.ordre_passage[i] <<
+                    if(i==0) {
+                        ind_joueur_perdant = struct_joueurs.nb_total-1;
+                    }
+                    else {
+                        ind_joueur_perdant = i-1;
+                    }
+                    cout << "le mot " << mot_manche << " n’existe pas, " << ind_joueur_perdant+1 << struct_joueurs.ordre_passage[ind_joueur_perdant] <<
                     " prend un quart de singe" << endl;
-                    addQuartDeSinge(struct_joueurs, i);
+                    addQuartDeSinge(struct_joueurs, ind_joueur_perdant);
                     return;
                 }
                 else {
