@@ -32,4 +32,6 @@ void lancement_manche(Joueurs& struct_joueurs);
 
 void addQuartDeSinge(Joueurs& struct_joueurs, const uint indice);
 
+char* ajoute_lettre_au_mot(char mot_manche[], const char lettre_joueur);
+
 #endif //BUT1_SAE_S1_02_PARTIE_H

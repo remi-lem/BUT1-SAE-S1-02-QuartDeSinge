@@ -25,16 +25,18 @@ void lancement_manche(Joueurs& struct_joueurs) {
             cout << ") > ";
             if (struct_joueurs.ordre_passage[i] == 'H') {
                 cin >> lettre_joueur;
-            } else if (struct_joueurs.ordre_passage[i] == 'R') {
-                lettre_joueur = choix_lettre_robot(mot_manche);
+            }
+            else if (struct_joueurs.ordre_passage[i] == 'R') {
+                //lettre_joueur = choix_lettre_robot(mot_manche);
                 cout << lettre_joueur << endl;
-            } else {
+            }
+            else {
                 cout << "Erreur pour la manche. indice joueur : " << i << endl;
             }
 
             lettre_joueur = toupper(lettre_joueur);
             if (lettre_joueur == '?') {
-                existence_mot = recherche_existence_mot(mot_manche);
+                //existence_mot = recherche_existence_mot(mot_manche);
                 if (existence_mot) {
                     cout << "Le mot " << mot_manche << " existe, " << i+1 << struct_joueurs.ordre_passage[i] <<
                     " prend un quart de singe" << endl;
@@ -51,6 +53,9 @@ void lancement_manche(Joueurs& struct_joueurs) {
                     cout << "ERREUR" << endl;
                     return;
                 }
+            }
+            else {
+                strcpy(mot_manche,ajoute_lettre_au_mot(mot_manche, lettre_joueur));
             }
         }
     }
@@ -79,4 +84,11 @@ void aff_points_singe(const Joueurs& struct_joueurs) {
 
 void addQuartDeSinge(Joueurs& struct_joueurs, const uint indice) {
     struct_joueurs.pointsSingeJoueur[indice].pointsDeSinge += 0.25;
+}
+
+char* ajoute_lettre_au_mot(char mot_manche[], const char lettre_joueur) {
+    uint long_mot = strlen(mot_manche);
+    mot_manche[long_mot] = lettre_joueur;
+    //mot_manche[long_mot+1] = "\0";
+    return mot_manche;
 }
