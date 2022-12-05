@@ -1,0 +1,22 @@
+1H, () >
+2R, (A) > B
+3H, (AB) >
+4R, (ABA) > C
+1H, (ABAC) >
+4R, saisir le mot > ABACUS
+le mot ABACUS existe, 1H prend un quart de singe
+1H : 0.25; 2R : 0; 3H : 0; 4R : 0
+1H, () >
+2R, (A) > B
+3H, (AB) >
+4R, (ABA) > C
+1H, (ABAC) >
+le mot ABACA existe, 1H prend un quart de singe
+1H : 0.5; 2R : 0; 3H : 0; 4R : 0
+1H, () >
+2R, (A) > B
+3H, (AB) >
+4R, (ABA) > ?
+3H, saisir le mot > ABACADABRA
+le mot ABACADABRA n’existe pas, 3H prend un quart de singe
+1H : 0.5; 2R : 0; 3H : 0.25; 4R : 0

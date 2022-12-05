@@ -1,9 +1,11 @@
-//
-// Created by remi on 28/11/22.
-//
+/**
+ * @file dico.cpp
+ * @author Hamza
+ */
 
 #include "dico.h"
 
+// A UTILISER UNIQUEMENT POUR REFERENCE : SUPPRIMER QUAND LE PROGRAMME EST FONCTIONNEL
 void fonc_prof_dico_test() {
     ifstream in(HOME_DICO); // on ouvre le fichier
     if (!in) {
@@ -20,4 +22,12 @@ void fonc_prof_dico_test() {
     }
     in.close(); // on ferme le fichier
     cout << nb << " mots de " << (float)longueur / nb << " car. en moyenne" << endl;
+}
+
+bool recherche_existence_mot(char mot_manche[]) {
+    // A FAIRE
+}
+
+char choix_lettre_robot(char mot_manche[]) {
+    // A FAIRE
 }

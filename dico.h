@@ -1,6 +1,7 @@
-//
-// Created by remi on 29/11/22.
-//
+/**
+ * @file dico.h
+ * @author Hamza
+ */
 
 #ifndef BUT1_SAE_S1_02_DICO_H
 #define BUT1_SAE_S1_02_DICO_H
@@ -15,12 +16,25 @@
 
 using namespace std;
 
+/**
+ * DOC A FAIRE
+ */
 enum {
     ERR_OUVERTURE_DICO
 };
 
-void fonc_prof_dico_test();
+/**
+ * DOC A FAIRE
+ * @param mot_manche
+ * @return
+ */
+bool recherche_existence_mot(char mot_manche[]);
 
-char choix_lettre_robot(char mot_manche[26]);
+/**
+ * DOC A FAIRE
+ * @param mot_manche
+ * @return
+ */
+char choix_lettre_robot(char mot_manche[]);
 
 #endif //BUT1_SAE_S1_02_DICO_H

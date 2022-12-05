@@ -1,16 +1,10 @@
-//
-// Created by remi on 28/11/22.
-//
+/**
+ * @file main.cpp
+ * @author Rémi
+ */
 
-#include "joueurs.h"
-#include "dico.h"
 #include "partie.h"
 
-/*
-   argc -> nombre de paramètres sur la ligne de commande (+ 1)
-   argv -> paramètres de la ligne de commande
-           (argv[0] : la cde, argv[1] : le 1er paramètre, etc)
-*/
 /**
  * @brief Fonction principale
  * @return état d'execution (0 si OK)
@@ -32,7 +26,7 @@ int main(int argc, const char* argv[]) {
             break;
         case(CORRECT):
             lancement_partie(struct_joueurs);
+            cout << "La partie est finie" << endl;
     }
-    fonc_prof_dico_test();
     return 0;
 }

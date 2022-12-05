@@ -1,6 +1,7 @@
-//
-// Created by remi on 29/11/22.
-//
+/**
+ * @file partie.h
+ * @author Rémi
+ */
 
 #ifndef BUT1_SAE_S1_02_PARTIE_H
 #define BUT1_SAE_S1_02_PARTIE_H
@@ -8,30 +9,42 @@
 #include <cstring>
 
 #include "joueurs.h"
+#include "manche.h"
 
+/**
+ * @brief Enumération utilisée par la fonction verif_points_singe
+ * @see fonction verif_points_singe dans partie.h
+ */
 enum {
     MAX_PT_SINGE = 1,
     PT_SINGE_OK = -1
 };
 
+/**
+ * @brief Nombre de lettre composant le mot le plus long du dictionnaire
+ */
 enum {
     MAX_LETTRES_MOT = 25
 };
 
-void aff_points_singe(const Joueurs& struct_joueurs);
-
-int verif_points_singe(const Joueurs& struct_joueurs);
-
 /**
- * @brief Lance une partie
- * @param struct_joueurs
+ * @brief Lancement d'une partie de Quart de Singe
+ * @param struct_joueurs une référence vers la structure des joueurs
  */
 void lancement_partie(Joueurs& struct_joueurs);
 
-void lancement_manche(Joueurs& struct_joueurs);
+/**
+ * @brief Vérification des points pour chaque joueur
+ * @param struct_joueurs
+ * @return int : soit l'indice du premier joueur à 4 quarts de singe, sinon PT_SINGE_OK
+ * @see énumération de la vérification des points dans partie.h
+ */
+int verif_points_singe(const Joueurs& struct_joueurs);
 
-void addQuartDeSinge(Joueurs& struct_joueurs, const uint indice);
-
-char* ajoute_lettre_au_mot(char mot_manche[], const char lettre_joueur);
+/**
+ * @brief Affichage des points pour chaque joueur
+ * @param struct_joueurs une référence vers la structure des joueurs
+ */
+void aff_points_singe(const Joueurs& struct_joueurs);
 
 #endif //BUT1_SAE_S1_02_PARTIE_H
