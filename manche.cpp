@@ -34,6 +34,12 @@ void lancement_manche(Joueurs& struct_joueurs) {
                 verifie_qui_perd(struct_joueurs, mot_propose, mot_manche, i);
                 return;
             }
+            else if(lettre_joueur == '!') {
+                cout << "Le joueur " << i+1 << struct_joueurs.ordre_passage[i] <<
+                     " abandonne la manche et prend un quart de singe" << endl;
+                addQuartDeSinge(struct_joueurs, i);
+                return;
+            }
             else {
                 strcpy(mot_manche,ajoute_lettre_au_mot(mot_manche, lettre_joueur));
             }
@@ -74,9 +80,6 @@ void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mo
         cout << "le mot " << mot_propose << " n’existe pas, " << num_joueur_perdant <<
              struct_joueurs.ordre_passage[ind_joueur_perdant] << " prend un quart de singe" << endl;
         addQuartDeSinge(struct_joueurs, ind_joueur_perdant);
-    }
-    else {
-        cout << "ERREUR : bool pas bool" << endl;
     }
 }
 

@@ -19,7 +19,7 @@ void initialiser_struct_joueurs(Joueurs &struct_joueurs, const uint taille_char_
 int traitement_arguments(const int argc, const char* argv[], Joueurs& struct_joueurs) {
     uint taille_char_args = strlen(argv[1]);
     uint cpt_humain=0, cpt_robot=0;
-    char lettre_arg = ' ';
+    char lettre_arg;
     initialiser_struct_joueurs(struct_joueurs, taille_char_args);
     if (argc >= 2) {
         for (uint i = 0; i < strlen(argv[1]); i++) {

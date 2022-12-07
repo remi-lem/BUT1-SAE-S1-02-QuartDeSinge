@@ -17,11 +17,11 @@ void fonc_prof_dico_test() {
     in >> setw(MAX) >> s; // on essaye de lire le premier mot
     while (in) {
         ++nb; // ça s'est bien passé, on le compte
-        longueur += strlen(s); // et on accumule sa longueur
+        longueur += (int)strlen(s); // et on accumule sa longueur
         in >> setw(MAX) >> s; // on essaye de lire le mot suivant
     }
     in.close(); // on ferme le fichier
-    cout << nb << " mots de " << (float)longueur / nb << " car. en moyenne" << endl;
+    cout << nb << " mots de " << (float)longueur / (float)nb << " car. en moyenne" << endl;
 }
 
 bool recherche_existence_mot(const char mot[]) {
