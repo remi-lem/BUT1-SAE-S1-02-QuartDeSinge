@@ -55,8 +55,17 @@ uint indice_joueur_precedent(Joueurs& struct_joueurs, uint indice_joueur) {
     if(indice_joueur==0) {
         return struct_joueurs.nb_total-1;
     }
-    else if(indice_joueur >= 1) {
+    else {
         return indice_joueur-1;
     }
-    return -1;
+}
+
+uint numero_joueur_precedent(Joueurs& struct_joueurs, uint indice_joueur) {
+    uint numero_joueur = indice_joueur+1;
+    if(numero_joueur==1) {
+        return struct_joueurs.nb_total;
+    }
+    else {
+        return numero_joueur-1;
+    }
 }

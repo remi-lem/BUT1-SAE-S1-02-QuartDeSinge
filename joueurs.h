@@ -78,4 +78,12 @@ int traitement_arguments(const int argc, const char* argv[], Joueurs& struct_jou
  */
 uint indice_joueur_precedent(Joueurs& struct_joueurs, uint indice_joueur);
 
+/**
+ * @brief Recherche de le numéro du joueur précédent
+ * @param struct_joueurs une référence vers la structure des étudiants
+ * @param indice_joueur l'indice du joueur actuel
+ * @return le numero du joueur précédent, sinon -1
+ */
+uint numero_joueur_precedent(Joueurs& struct_joueurs, uint indice_joueur);
+
 #endif //BUT1_SAE_S1_02_JOUEURS_H
