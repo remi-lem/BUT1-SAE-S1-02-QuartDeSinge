@@ -14,8 +14,6 @@
 #include <iomanip> // pour setw
 #include <cstring>
 
-#include "partie.h"
-
 using namespace std;
 
 /**

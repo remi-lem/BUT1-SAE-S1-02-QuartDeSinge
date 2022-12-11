@@ -28,9 +28,14 @@ void lancement_manche(Joueurs& struct_joueurs) {
             lettre_joueur = (char)toupper(lettre_joueur);
             if (lettre_joueur == '?') {
                 cout << numero_joueur_precedent(struct_joueurs, i) <<
-                     struct_joueurs.ordre_passage[indice_joueur_precedent(struct_joueurs, i)] <<
-                     " saisir le mot > ";
-                cin >> mot_propose;
+                struct_joueurs.ordre_passage[indice_joueur_precedent(struct_joueurs, i)] <<
+                " saisir le mot > ";
+                if (struct_joueurs.ordre_passage[i] == 'R') {
+                    strcpy(mot_propose, choix_mot_robot(mot_manche)); // A REVOIR
+                }
+                else {
+                    cin >> mot_propose;
+                }
                 verifie_qui_perd(struct_joueurs, mot_propose, mot_manche, i);
                 return;
             }
@@ -64,8 +69,9 @@ void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mo
     if(!correspondance_mot) {
         cout << "le mot " << mot_propose << " ne commence pas par les lettres attendues, le joueur " <<
         numero_joueur_precedent(struct_joueurs, indice_joueur) <<
-        indice_joueur_precedent(struct_joueurs, indice_joueur) << " prend un quart de singe" << endl;
-        addQuartDeSinge(struct_joueurs, indice_joueur);
+        struct_joueurs.ordre_passage[indice_joueur_precedent(struct_joueurs, indice_joueur)] <<
+        " prend un quart de singe" << endl;
+        addQuartDeSinge(struct_joueurs, indice_joueur_precedent(struct_joueurs, indice_joueur));
         return;
     }
     bool existence_mot = recherche_existence_mot(mot_propose);
