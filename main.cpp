@@ -15,6 +15,9 @@ int main(int argc, const char* argv[]) {
     //fonc_prof_traitement_arguments(argc, argv);
     result_traitement_arguments = traitement_arguments(argc, argv, struct_joueurs);
     switch (result_traitement_arguments) {
+        case(DICO_PAS_OUVERT):
+            cout << "Le dictionnaire n'a pas pu etre ouvert";
+            break;
         case(PAS_DE_PARAM):
             cout << "Il faut lancer le programme avec des paramètres" << endl;
             break;

@@ -20,6 +20,13 @@ int traitement_arguments(const int argc, const char* argv[], Joueurs& struct_jou
     uint taille_char_args = strlen(argv[1]);
     uint cpt_humain=0, cpt_robot=0;
     char lettre_arg;
+
+    ifstream in(HOME_DICO);
+    if (!in) {
+        return DICO_PAS_OUVERT;
+    }
+    in.close();
+
     initialiser_struct_joueurs(struct_joueurs, taille_char_args);
     if (argc >= 2) {
         for (uint i = 0; i < strlen(argv[1]); i++) {

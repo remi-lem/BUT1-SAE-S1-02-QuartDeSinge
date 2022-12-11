@@ -9,6 +9,8 @@
 #include <iostream>
 #include <cstring>
 
+#include "dico.h"
+
 /**
  * @brief pour éviter d'écrire std::cin et std::cout
  */
@@ -42,6 +44,7 @@ struct Joueurs {
  * @see fonction traitement_arguments dans joueurs.h
  */
 enum {
+    DICO_PAS_OUVERT,
     PAS_DE_PARAM,
     NB_JOUEURS_PAS_CORRECT,
     JOUEUR_NI_H_NI_R,
