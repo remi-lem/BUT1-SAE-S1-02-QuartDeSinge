@@ -1,0 +1,33 @@
+1H, () > 2H, (A) > 3H, (AD) > 4H, (ADV) > 5H, (ADVE) > 6H, (ADVER) > 1H, (ADVERS) > 2H, (ADVERSI) > 3H, (ADVERSIT) > le mot ADVERSITE existe, le joueur 3H prend un quart de singe
+1H : 0; 2H : 0; 3H : 0.25; 4H : 0; 5H : 0; 6H : 0
+3H, () > 4H, (A) > 5H, (AG) > 6H, (AGH) > 1H, (AGHQ) > 6H, saisir le mot > le mot AGI ne commence pas par les lettres attendues, le joueur 6H prend un quart de singe
+1H : 0; 2H : 0; 3H : 0.25; 4H : 0; 5H : 0; 6H : 0.25
+6H, () > 1H, (A) > 2H, (AT) > 3H, (ATC) > 4H, (ATCH) > 5H, (ATCHO) > 6H, (ATCHOU) > 5H, saisir le mot > le mot ATCHOUM existe, le joueur 6H prend un quart de singe
+1H : 0; 2H : 0; 3H : 0.25; 4H : 0; 5H : 0; 6H : 0.5
+6H, () > 1H, (A) > 2H, (AT) > 3H, (ATO) > 4H, (ATOC) > le joueur 4H abandonne la manche et prend un quart de singe
+1H : 0; 2H : 0; 3H : 0.25; 4H : 0.25; 5H : 0; 6H : 0.5
+4H, () > 5H, (A) > 6H, (AD) > 1H, (ADS) > 2H, (ADSO) > 3H, (ADSOR) > 4H, (ADSORB) > 5H, (ADSORBI) > 6H, (ADSORBIO) > 1H, (ADSORBION) > 6H, saisir le mot > le mot ADSORBIONS existe, le joueur 1H prend un quart de singe
+1H : 0.25; 2H : 0; 3H : 0.25; 4H : 0.25; 5H : 0; 6H : 0.5
+1H, () > 2H, (A) > 3H, (AL) > 4H, (ALV) > 5H, (ALVE) > 6H, (ALVEO) > 1H, (ALVEOL) > 2H, (ALVEOLI) > 3H, (ALVEOLIT) > 4H, (ALVEOLITD) > 3H, saisir le mot > le mot ALVEOLITE ne commence pas par les lettres attendues, le joueur 3H prend un quart de singe
+1H : 0.25; 2H : 0; 3H : 0.5; 4H : 0.25; 5H : 0; 6H : 0.5
+3H, () > 4H, (A) > 5H, (AT) > 6H, (ATY) > 1H, (ATYP) > 2H, (ATYPI) > 3H, (ATYPIQ) > 4H, (ATYPIQU) > le joueur 4H abandonne la manche et prend un quart de singe
+1H : 0.25; 2H : 0; 3H : 0.5; 4H : 0.5; 5H : 0; 6H : 0.5
+4H, () > 5H, (A) > 6H, (AF) > 1H, (AFA) > 2H, (AFAP) > 1H, saisir le mot > le mot AFAT ne commence pas par les lettres attendues, le joueur 1H prend un quart de singe
+1H : 0.5; 2H : 0; 3H : 0.5; 4H : 0.5; 5H : 0; 6H : 0.5
+1H, () > 2H, (A) > 3H, (AC) > 4H, (ACC) > 5H, (ACCL) > 6H, (ACCLI) > 1H, (ACCLIM) > 2H, (ACCLIMA) > 3H, (ACCLIMAT) > 4H, (ACCLIMATO) > 5H, (ACCLIMATON) > le joueur 5H abandonne la manche et prend un quart de singe
+1H : 0.5; 2H : 0; 3H : 0.5; 4H : 0.5; 5H : 0.25; 6H : 0.5
+5H, () > 6H, (A) > 1H, (AV) > 2H, (AVO) > 3H, (AVOC) > 4H, (AVOCA) > 5H, (AVOCAS) > 6H, (AVOCASS) > 1H, (AVOCASSI) > 2H, (AVOCASSIE) > 3H, (AVOCASSIEX) > 2H, saisir le mot > le mot AVOCASSIEZ ne commence pas par les lettres attendues, le joueur 2H prend un quart de singe
+1H : 0.5; 2H : 0.25; 3H : 0.5; 4H : 0.5; 5H : 0.25; 6H : 0.5
+2H, () > 3H, (A) > 4H, (AT) > 5H, (ATA) > 6H, (ATAM) > 1H, (ATAMA) > 6H, saisir le mot > le mot ATAMAN existe, le joueur 1H prend un quart de singe
+1H : 0.75; 2H : 0.25; 3H : 0.5; 4H : 0.5; 5H : 0.25; 6H : 0.5
+1H, () > 2H, (A) > 3H, (AC) > 4H, (ACU) > 5H, (ACUT) > 6H, (ACUTA) > 1H, (ACUTAN) > 2H, (ACUTANG) > 3H, (ACUTANGL) > le joueur 3H abandonne la manche et prend un quart de singe
+1H : 0.75; 2H : 0.25; 3H : 0.75; 4H : 0.5; 5H : 0.25; 6H : 0.5
+3H, () > 4H, (A) > 5H, (AP) > 6H, (APN) > 1H, (APNE) > 2H, (APNEI) > 3H, (APNEIQ) > 4H, (APNEIQU) > le mot APNEIQUE existe, le joueur 4H prend un quart de singe
+1H : 0.75; 2H : 0.25; 3H : 0.75; 4H : 0.75; 5H : 0.25; 6H : 0.5
+4H, () > 5H, (A) > 6H, (AI) > 1H, (AIO) > 2H, (AIOL) > 1H, saisir le mot > le mot AIOLI existe, le joueur 2H prend un quart de singe
+1H : 0.75; 2H : 0.5; 3H : 0.75; 4H : 0.75; 5H : 0.25; 6H : 0.5
+2H, () > 3H, (A) > 4H, (AB) > 5H, (ABE) > 6H, (ABEL) > 1H, (ABELI) > 2H, (ABELIE) > 3H, (ABELIEC) > 2H, saisir le mot > le mot ABELIEN ne commence pas par les lettres attendues, le joueur 2H prend un quart de singe
+1H : 0.75; 2H : 0.75; 3H : 0.75; 4H : 0.75; 5H : 0.25; 6H : 0.5
+2H, () > 3H, (A) > 4H, (AA) > 5H, (AAK) > 4H, saisir le mot > le mot AAS ne commence pas par les lettres attendues, le joueur 4H prend un quart de singe
+1H : 0.75; 2H : 0.75; 3H : 0.75; 4H : 1; 5H : 0.25; 6H : 0.5
+La partie est finie
