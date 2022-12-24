@@ -9,6 +9,7 @@ void lancement_manche(Joueurs& struct_joueurs) {
     char lettre_joueur = ' ';
     char mot_manche[MAX_LETTRES_MOT+1] = "";
     char mot_propose[MAX_LETTRES_MOT+1] = "";
+    const char* ptr_mot_du_robot;
     for(uint h=0; h<MAX_LETTRES_MOT; h++) {
         for (uint i = 0; i < struct_joueurs.nb_total; i++) {
             cout << i + 1 << struct_joueurs.ordre_passage[i] << ", (";
@@ -16,6 +17,7 @@ void lancement_manche(Joueurs& struct_joueurs) {
             cout << ") > ";
             if (struct_joueurs.ordre_passage[i] == 'H') {
                 cin >> lettre_joueur;
+                cin.ignore(INT_MAX, '\n'); // on enlève ce qui dépasse
             }
             else if (struct_joueurs.ordre_passage[i] == 'R') {
                 lettre_joueur = choix_lettre_robot(mot_manche);
@@ -30,8 +32,10 @@ void lancement_manche(Joueurs& struct_joueurs) {
                 cout << numero_joueur_precedent(struct_joueurs, i) <<
                 struct_joueurs.ordre_passage[indice_joueur_precedent(struct_joueurs, i)] <<
                 " saisir le mot > ";
-                if (struct_joueurs.ordre_passage[i] == 'R') {
-                    strcpy(mot_propose, choix_mot_robot(mot_manche)); // A REVOIR
+                if (struct_joueurs.ordre_passage[indice_joueur_precedent(struct_joueurs, i)] == 'R') {
+                    ptr_mot_du_robot = choix_mot_robot(mot_manche);
+                    strcpy(mot_propose, ptr_mot_du_robot);
+                    cout << endl;
                 }
                 else {
                     cin >> mot_propose;

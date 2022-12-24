@@ -7,6 +7,7 @@
 #define BUT1_SAE_S1_02_MANCHE_H
 
 #include <cassert>
+#include <climits>
 
 #include "joueurs.h"
 #include "partie.h"

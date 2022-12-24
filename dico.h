@@ -1,6 +1,6 @@
 /**
  * @file dico.h
- * @author Hamza
+ * @author Rémi
  */
 
 #ifndef BUT1_SAE_S1_02_DICO_H
@@ -36,6 +36,13 @@ bool recherche_existence_mot(const char mot[]);
  * @return
  */
 char choix_lettre_robot(const char mot[]);
+
+/**
+ * DOC A FAIRE
+ * @param mot_manche
+ * @return
+ */
+char* choix_mot_robot(const char mot[]);
 
 /**
  * DOC A FAIRE

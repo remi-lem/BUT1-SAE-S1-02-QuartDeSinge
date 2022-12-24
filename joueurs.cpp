@@ -17,9 +17,13 @@ void initialiser_struct_joueurs(Joueurs &struct_joueurs, const uint taille_char_
 }
 
 int traitement_arguments(const int argc, const char* argv[], Joueurs& struct_joueurs) {
-    uint taille_char_args = strlen(argv[1]);
     uint cpt_humain=0, cpt_robot=0;
     char lettre_arg;
+
+    if (argc < 2) {
+        return PAS_DE_PARAM;
+    }
+    uint taille_char_args = strlen(argv[1]);
 
     ifstream in(HOME_DICO);
     if (!in) {
@@ -44,9 +48,6 @@ int traitement_arguments(const int argc, const char* argv[], Joueurs& struct_jou
                     return JOUEUR_NI_H_NI_R;
             }
         }
-    }
-    else {
-        return PAS_DE_PARAM;
     }
     if(cpt_robot+cpt_humain < MIN_JOUEURS) {
         return NB_JOUEURS_PAS_CORRECT;

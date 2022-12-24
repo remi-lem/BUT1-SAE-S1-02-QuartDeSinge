@@ -1,6 +1,6 @@
 /**
  * @file dico.cpp
- * @author Hamza
+ * @author Rémi
  */
 
 #include "dico.h"
@@ -32,6 +32,11 @@ bool recherche_existence_mot(const char mot[]) {
 char choix_lettre_robot(const char mot[]) {
     // A FAIRE
     return 'N';
+}
+
+char* choix_mot_robot(const char mot[]) {
+    // a faire
+    return "CHEVAL";
 }
 
 bool le_mot_peut_continuer(const char mot[]) {
