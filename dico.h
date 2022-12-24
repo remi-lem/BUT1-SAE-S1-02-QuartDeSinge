@@ -13,8 +13,10 @@
 #include <fstream> // pour ifstream
 #include <iomanip> // pour setw
 #include <cstring>
-
 using namespace std;
+
+#include "conteneurTDE.h"
+#include "partie.h"
 
 /**
  * DOC A FAIRE
@@ -22,6 +24,13 @@ using namespace std;
 enum {
     ERR_OUVERTURE_DICO
 };
+
+/**
+ * DOC A FAIRE
+ * @param mot_manche
+ * @return
+ */
+ConteneurTDE dico_dans_conteneur();
 
 /**
  * DOC A FAIRE

@@ -6,6 +6,8 @@
 #include "partie.h"
 
 void lancement_partie(Joueurs& struct_joueurs) {
+    ConteneurTDE conteneur_dico;
+    conteneur_dico = dico_dans_conteneur();
     while(verif_points_singe(struct_joueurs) == PT_SINGE_OK) {
         lancement_manche(struct_joueurs);
         aff_points_singe(struct_joueurs);

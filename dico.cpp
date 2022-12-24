@@ -24,6 +24,23 @@ void fonc_prof_dico_test() {
     cout << nb << " mots de " << (float)longueur / (float)nb << " car. en moyenne" << endl;
 }
 
+ConteneurTDE dico_dans_conteneur() {
+    int capacite_cont_dico = 100, pas_cont_dico = 2; // modifier si besoin
+    char mot[MAX_LETTRES_MOT];
+    uint indice = 0;
+    ConteneurTDE conteneur_dico;
+    initialiser(conteneur_dico, capacite_cont_dico, pas_cont_dico);
+    ifstream in(HOME_DICO);
+    in >> setw(MAX_LETTRES_MOT) >> mot;
+    while (in) {
+        ecrire(conteneur_dico, indice, mot);
+        in >> setw(MAX_LETTRES_MOT) >> mot;
+        ++indice;
+    }
+    in.close();
+    return conteneur_dico;
+}
+
 bool recherche_existence_mot(const char mot[]) {
     // A FAIRE
     return true;

@@ -10,6 +10,8 @@
 
 #include "joueurs.h"
 #include "manche.h"
+#include "dico.h"
+#include "conteneurTDE.h"
 
 /**
  * @brief Enumération utilisée par la fonction verif_points_singe
