@@ -25,6 +25,7 @@ void lancement_manche(Joueurs& struct_joueurs) {
             }
             else {
                 cout << "Erreur pour la manche. indice joueur : " << i << endl;
+                exit(1);
             }
 
             lettre_joueur = (char)toupper(lettre_joueur);
