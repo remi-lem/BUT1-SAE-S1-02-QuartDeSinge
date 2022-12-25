@@ -15,17 +15,19 @@
 /**
  * @brief Lancement d'une manche de Quart de Singe
  * @param struct_joueurs une référence vers la structure des joueurs
+ * @param conteneur_dico le conteneur du dictionnaire
  */
-void lancement_manche(Joueurs& struct_joueurs);
+void lancement_manche(Joueurs& struct_joueurs, ConteneurTDE& conteneur_dico);
 
 /**
  * @brief Verification du joueur perdant et attribution des points quart de singe
  * @param struct_joueurs une référence vers la structure des joueurs
  * @param mot_manche le mot de la manche actuelle
  * @param indice_joueur l'indice du joueur concerné
+ * @param conteneur_dico le conteneur du dictionnaire
  * @pre indice supérieur ou egal a 0
  */
-void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mot_manche[], const uint indice_joueur);
+void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mot_manche[], const uint indice_joueur, ConteneurTDE& conteneur_dico);
 
 /**
  * @brief ajoute un quart de point (quart de singe) à un joueur

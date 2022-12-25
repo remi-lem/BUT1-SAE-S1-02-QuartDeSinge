@@ -11,7 +11,8 @@
  * mettre ../ods4 pour compiler dans CLion
  * mettre direct ods4 pour compiler avec g++
 */
-#define HOME_DICO "ods4.txt"
+#define HOME_DICO "../ods4.txt"
+//#define HOME_DICO "ods4.txt"
 
 #include <iostream>
 #include <fstream> // pour ifstream
@@ -46,29 +47,25 @@ ConteneurTDE dico_dans_conteneur();
 /**
  * DOC A FAIRE
  * @param mot_manche
+ * @param conteneur_dico le conteneur du dictionnaire
  * @return
  */
-bool recherche_existence_mot(const char mot[]);
+bool recherche_existence_mot(const char mot[], ConteneurTDE& conteneur_dico);
 
 /**
  * DOC A FAIRE
  * @param mot_manche
+ * @param conteneur_dico le conteneur du dictionnaire
  * @return
  */
-char choix_lettre_robot(const char mot[]);
+char choix_lettre_robot(const char mot[], ConteneurTDE& conteneur_dico);
 
 /**
  * DOC A FAIRE
  * @param mot_manche
+ * @param conteneur_dico le conteneur du dictionnaire
  * @return
  */
-char* choix_mot_robot(const char mot[]);
-
-/**
- * DOC A FAIRE
- * @param mot_manche
- * @return
- */
-bool le_mot_peut_continuer(const char mot[]);
+char* choix_mot_robot(const char mot[], ConteneurTDE& conteneur_dico);
 
 #endif //BUT1_SAE_S1_02_DICO_H

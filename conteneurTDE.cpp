@@ -37,4 +37,5 @@ void ecrire(ConteneurTDE& c, unsigned int i, const Item& it) {
         c.capacite = newTaille;
     }
     c.tab[i] = it;
+    c.nb_it_sto += 1;
 }

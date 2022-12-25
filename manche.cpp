@@ -5,7 +5,7 @@
 
 #include "manche.h"
 
-void lancement_manche(Joueurs& struct_joueurs) {
+void lancement_manche(Joueurs& struct_joueurs, ConteneurTDE& conteneur_dico) {
     char lettre_joueur = ' ';
     char mot_manche[MAX_LETTRES_MOT+1] = "";
     char mot_propose[MAX_LETTRES_MOT+1] = "";
@@ -20,7 +20,7 @@ void lancement_manche(Joueurs& struct_joueurs) {
                 cin.ignore(INT_MAX, '\n'); // on enlève ce qui dépasse
             }
             else if (struct_joueurs.ordre_passage[i] == 'R') {
-                lettre_joueur = choix_lettre_robot(mot_manche);
+                lettre_joueur = choix_lettre_robot(mot_manche, conteneur_dico);
                 cout << lettre_joueur << endl;
             }
             else {
@@ -34,14 +34,14 @@ void lancement_manche(Joueurs& struct_joueurs) {
                 struct_joueurs.ordre_passage[indice_joueur_precedent(struct_joueurs, i)] <<
                 " saisir le mot > ";
                 if (struct_joueurs.ordre_passage[indice_joueur_precedent(struct_joueurs, i)] == 'R') {
-                    ptr_mot_du_robot = choix_mot_robot(mot_manche);
+                    ptr_mot_du_robot = choix_mot_robot(mot_manche, conteneur_dico);
                     strcpy(mot_propose, ptr_mot_du_robot);
                     cout << endl;
                 }
                 else {
                     cin >> mot_propose;
                 }
-                verifie_qui_perd(struct_joueurs, mot_propose, mot_manche, i);
+                verifie_qui_perd(struct_joueurs, mot_propose, mot_manche, i, conteneur_dico);
                 return;
             }
             else if(lettre_joueur == '!') {
@@ -53,7 +53,7 @@ void lancement_manche(Joueurs& struct_joueurs) {
             else {
                 strcpy(mot_manche,ajoute_lettre_au_mot(mot_manche, lettre_joueur));
             }
-            if(!le_mot_peut_continuer(mot_manche)) {
+            if(recherche_existence_mot(mot_manche, conteneur_dico)) {
                 cout << "le mot " << mot_manche << " existe, " << i+1 << struct_joueurs.ordre_passage[i] <<
                      " prend un quart de singe" << endl;
                 addQuartDeSinge(struct_joueurs, i);
@@ -64,7 +64,7 @@ void lancement_manche(Joueurs& struct_joueurs) {
     cout << "Mot de plus de 25 lettres impossible" << endl;
 }
 
-void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mot_manche[], const uint indice_joueur) {
+void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mot_manche[], const uint indice_joueur, ConteneurTDE& conteneur_dico) {
     assert(indice_joueur >= 0);
     uint ind_joueur_perdant, num_joueur_perdant;
     bool correspondance_mot = verif_correspondance_mot(mot_propose, mot_manche);
@@ -79,7 +79,7 @@ void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mo
         addQuartDeSinge(struct_joueurs, indice_joueur_precedent(struct_joueurs, indice_joueur));
         return;
     }
-    bool existence_mot = recherche_existence_mot(mot_propose);
+    bool existence_mot = recherche_existence_mot(mot_propose, conteneur_dico);
     if (existence_mot) {
         cout << "Le mot " << mot_propose << " existe, " << indice_joueur+1 << struct_joueurs.ordre_passage[indice_joueur]
              << " prend un quart de singe" << endl;

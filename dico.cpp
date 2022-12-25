@@ -41,22 +41,22 @@ ConteneurTDE dico_dans_conteneur() {
     return conteneur_dico;
 }
 
-bool recherche_existence_mot(const char mot[]) {
-    // A FAIRE
-    return true;
+bool recherche_existence_mot(const char mot[], ConteneurTDE& conteneur_dico) {
+    for(uint i=0; i< conteneur_dico.nb_it_sto; ++i) {
+        cout << lire(conteneur_dico, i);
+        if(strcmp(lire(conteneur_dico, i), mot) == 0) {
+            return true;
+        }
+    }
+    return false;
 }
 
-char choix_lettre_robot(const char mot[]) {
+char choix_lettre_robot(const char mot[], ConteneurTDE& conteneur_dico) {
     // A FAIRE
     return 'N';
 }
 
-char* choix_mot_robot(const char mot[]) {
+char* choix_mot_robot(const char mot[], ConteneurTDE& conteneur_dico) {
     // a faire
     return (char*)"CHEVAL";
-}
-
-bool le_mot_peut_continuer(const char mot[]) {
-    // A FAIRE
-    return true;
 }

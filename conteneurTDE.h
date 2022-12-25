@@ -18,6 +18,8 @@ struct ConteneurTDE {
     unsigned int pasExtension;
     /// Conteneur alloué en mémoire dynamique.
     Item* tab;
+    /// nombre d'Items stockées
+    unsigned int nb_it_sto;
 };
 
 /**

@@ -9,9 +9,10 @@ void lancement_partie(Joueurs& struct_joueurs) {
     ConteneurTDE conteneur_dico;
     conteneur_dico = dico_dans_conteneur();
     while(verif_points_singe(struct_joueurs) == PT_SINGE_OK) {
-        lancement_manche(struct_joueurs);
+        lancement_manche(struct_joueurs, conteneur_dico);
         aff_points_singe(struct_joueurs);
     }
+    detruire(conteneur_dico); // on désaloue
 }
 
 int verif_points_singe(const Joueurs& struct_joueurs) {
