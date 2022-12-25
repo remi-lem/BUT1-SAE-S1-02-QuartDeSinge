@@ -6,12 +6,7 @@
 #ifndef BUT1_SAE_S1_02_PARTIE_H
 #define BUT1_SAE_S1_02_PARTIE_H
 
-#include <cstring>
-
-#include "joueurs.h"
 #include "manche.h"
-#include "dico.h"
-#include "conteneurTDE.h"
 
 /**
  * @brief Enumération utilisée par la fonction verif_points_singe
@@ -20,13 +15,6 @@
 enum {
     MAX_PT_SINGE = 1,
     PT_SINGE_OK = -1
-};
-
-/**
- * @brief Nombre de lettre composant le mot le plus long du dictionnaire
- */
-enum {
-    MAX_LETTRES_MOT = 25
 };
 
 /**

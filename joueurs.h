@@ -9,7 +9,7 @@
 #include <iostream>
 #include <cstring>
 
-#include "dico.h"
+//#include "dico.h"
 
 /**
  * @brief pour éviter d'écrire std::cin et std::cout
@@ -63,15 +63,6 @@ const int MIN_JOUEURS = 2;
  */
 void initialiser_struct_joueurs(Joueurs &struct_joueurs, const uint taille_char_args);
 
-/**
- * @brief Traitement des arguments passés en ligne de commande pour lancer le programme
- * @param argc le nombre d'arguments
- * @param argv le tableau contenant les arguments
- * @param struct_joueurs une référence vers la structure des joueurs
- * @return une valeur de l'énumération des joueurs
- * @see énumération dans joueurs.h
- */
-int traitement_arguments(const int argc, const char* argv[], Joueurs& struct_joueurs);
 
 /**
  * @brief Recherche de l'indice du joueur précédent

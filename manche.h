@@ -10,7 +10,6 @@
 #include <climits>
 
 #include "joueurs.h"
-#include "partie.h"
 #include "dico.h"
 
 /**

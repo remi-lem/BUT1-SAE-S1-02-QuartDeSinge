@@ -16,7 +16,14 @@
 using namespace std;
 
 #include "conteneurTDE.h"
-#include "partie.h"
+
+
+/**
+ * @brief Nombre de lettre composant le mot le plus long du dictionnaire
+ */
+enum {
+    MAX_LETTRES_MOT = 25
+};
 
 /**
  * DOC A FAIRE

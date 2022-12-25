@@ -53,7 +53,7 @@ char choix_lettre_robot(const char mot[]) {
 
 char* choix_mot_robot(const char mot[]) {
     // a faire
-    return "CHEVAL";
+    return (char*)"CHEVAL";
 }
 
 bool le_mot_peut_continuer(const char mot[]) {
