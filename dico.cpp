@@ -27,13 +27,16 @@ void fonc_prof_dico_test() {
 ConteneurTDE dico_dans_conteneur() {
     int capacite_cont_dico = 100, pas_cont_dico = 2; // modifier si besoin
     char mot[MAX_LETTRES_MOT];
+    Item ptr_mot_courant;
     uint indice = 0;
     ConteneurTDE conteneur_dico;
     initialiser(conteneur_dico, capacite_cont_dico, pas_cont_dico);
     ifstream in(HOME_DICO);
     in >> setw(MAX_LETTRES_MOT) >> mot;
     while (in) {
-        ecrire(conteneur_dico, indice, mot);
+        ptr_mot_courant = (Item)malloc(strlen(mot)+1);
+        strcpy(ptr_mot_courant, mot);
+        ecrire(conteneur_dico, indice, ptr_mot_courant);
         in >> setw(MAX_LETTRES_MOT) >> mot;
         ++indice;
     }
@@ -43,8 +46,8 @@ ConteneurTDE dico_dans_conteneur() {
 
 bool recherche_existence_mot(const char mot[], ConteneurTDE& conteneur_dico) {
     for(uint i=0; i< conteneur_dico.nb_it_sto; ++i) {
-        cout << lire(conteneur_dico, i);
         if(strcmp(lire(conteneur_dico, i), mot) == 0) {
+            // ici mettre une recherche dichotomique
             return true;
         }
     }

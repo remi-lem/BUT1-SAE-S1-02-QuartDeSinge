@@ -14,6 +14,7 @@ void initialiser(ConteneurTDE& c, unsigned int capa, unsigned int p) {
     c.capacite = capa;
     c.pasExtension = p;
     c.tab = new Item[capa];
+    c.nb_it_sto = 0; //REMI
 }
 
 void detruire(ConteneurTDE& c) {
@@ -36,6 +37,8 @@ void ecrire(ConteneurTDE& c, unsigned int i, const Item& it) {
         c.tab = newT;
         c.capacite = newTaille;
     }
+
+    malloc(sizeof(it));
     c.tab[i] = it;
-    c.nb_it_sto += 1;
+    c.nb_it_sto += 1;//REMI
 }
