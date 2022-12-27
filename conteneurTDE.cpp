@@ -18,6 +18,9 @@ void initialiser(ConteneurTDE& c, unsigned int capa, unsigned int p) {
 }
 
 void detruire(ConteneurTDE& c) {
+    for(uint i=0; i < c.nb_it_sto; ++i) {
+        free(c.tab[i]);
+    }
     delete[] c.tab;
     c.tab = NULL;
 }

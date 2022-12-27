@@ -47,7 +47,7 @@ ConteneurTDE dico_dans_conteneur() {
 bool recherche_existence_mot(const char mot[], ConteneurTDE& conteneur_dico) {
     for(uint i=0; i< conteneur_dico.nb_it_sto; ++i) {
         if(strcmp(lire(conteneur_dico, i), mot) == 0) {
-            // ici mettre une recherche dichotomique
+            //ici mettre une recherche dichotomique
             return true;
         }
     }
@@ -55,11 +55,30 @@ bool recherche_existence_mot(const char mot[], ConteneurTDE& conteneur_dico) {
 }
 
 char choix_lettre_robot(const char mot[], ConteneurTDE& conteneur_dico) {
-    // A FAIRE
-    return 'N';
+    //if(estrobot)
+        //lettre au hasard ??
+    for(uint i=0; i < conteneur_dico.nb_it_sto; ++i) {
+        if(verif_correspondance_mot(lire(conteneur_dico, i), mot) ){//&& !recherche_existence_mot(lire(conteneur_dico, i), conteneur_dico)){ // NON
+            //A REFAIRE : DICHOTOMIE
+            //ISOLER LES MOTS QuI COMMENCENT PAR LA LETTRE ??
+            //1 est ce que le mot existe
+            //2 si non quel lettre parmi les 26 lettre de l alphabet.
+            return lire(conteneur_dico, i)[strlen(mot)];
+        }
+    }
+    return '?';
 }
 
 char* choix_mot_robot(const char mot[], ConteneurTDE& conteneur_dico) {
     // a faire
     return (char*)"CHEVAL";
+}
+
+bool verif_correspondance_mot(const char mot_long[], const char mot_court[]) {
+    for(uint i=0; i<strlen(mot_court); i++) {
+        if(mot_court[i] != (char)toupper(mot_long[i])) {
+            return false;
+        }
+    }
+    return true;
 }

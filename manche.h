@@ -38,14 +38,6 @@ void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mo
 void addQuartDeSinge(Joueurs& struct_joueurs, const uint indice);
 
 /**
- * @brief Vérification de la correspondance des lettres entre le mot en cours de construction et le mot proposé
- * @param mot_propose mot proposé par le joueur
- * @param mot_manche mot en construction
- * @return la correspondance : vrai ou faux
- */
-bool verif_correspondance_mot(const char mot_propose[], const char mot_manche[]);
-
-/**
  * @brief met un mot en majuscules
  * @param[in,out] mot le mot à mettre en majuscule
  * @attention le mot est directement modifié

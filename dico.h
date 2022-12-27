@@ -11,8 +11,11 @@
  * mettre ../ods4 pour compiler dans CLion
  * mettre direct ods4 pour compiler avec g++
 */
+//#if __CLION_IDE__
 #define HOME_DICO "../ods4.txt"
+//#else
 //#define HOME_DICO "ods4.txt"
+//#endif
 
 #include <iostream>
 #include <fstream> // pour ifstream
@@ -67,5 +70,13 @@ char choix_lettre_robot(const char mot[], ConteneurTDE& conteneur_dico);
  * @return
  */
 char* choix_mot_robot(const char mot[], ConteneurTDE& conteneur_dico);
+
+/**
+ * @brief Vérification de la correspondance des lettres entre le mot en cours de construction et le mot proposé
+ * @param mot_propose mot proposé par le joueur
+ * @param mot_manche mot en construction
+ * @return la correspondance : vrai ou faux
+ */
+bool verif_correspondance_mot(const char mot_long[], const char mot_court[]);
 
 #endif //BUT1_SAE_S1_02_DICO_H

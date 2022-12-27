@@ -100,15 +100,6 @@ void addQuartDeSinge(Joueurs& struct_joueurs, const uint indice) {
     struct_joueurs.pointsSingeJoueur[indice].pointsDeSinge += 0.25;
 }
 
-bool verif_correspondance_mot(const char mot_propose[], const char mot_manche[]) {
-    for(uint i=0; i<strlen(mot_manche); i++) {
-        if(mot_manche[i] != (char)toupper(mot_propose[i])) {
-            return false;
-        }
-    }
-    return true;
-}
-
 void mot_en_majuscules(char* mot) {
     for(uint i=0; i<strlen(mot); i++) {
         mot[i] = (char)toupper(mot[i]);
