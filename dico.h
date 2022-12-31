@@ -12,9 +12,9 @@
  * mettre direct ods4 pour compiler avec g++
 */
 //#if __CLION_IDE__
-#define HOME_DICO "../ods4.txt"
+//#define HOME_DICO "../ods4.txt"
 //#else
-//#define HOME_DICO "ods4.txt"
+#define HOME_DICO "ods4.txt"
 //#endif
 
 #include <iostream>
