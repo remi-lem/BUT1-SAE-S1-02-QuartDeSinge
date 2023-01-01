@@ -44,7 +44,7 @@ ConteneurTDE dico_dans_conteneur() {
     return conteneur_dico;
 }
 
-bool recherche_existence_mot(const char mot[], ConteneurTDE& conteneur_dico) {
+bool recherche_existence_mot(const char mot[], const ConteneurTDE& conteneur_dico) {
     for(uint i=0; i< conteneur_dico.nb_it_sto; ++i) {
         if(strcmp(lire(conteneur_dico, i), mot) == 0) {
             //ici mettre une recherche dichotomique
@@ -54,22 +54,24 @@ bool recherche_existence_mot(const char mot[], ConteneurTDE& conteneur_dico) {
     return false;
 }
 
-char choix_lettre_robot(const char mot[], ConteneurTDE& conteneur_dico) {
-    //if(estrobot)
-        //lettre au hasard ??
-    for(uint i=0; i < conteneur_dico.nb_it_sto; ++i) {
-        if(verif_correspondance_mot(lire(conteneur_dico, i), mot) ){//&& !recherche_existence_mot(lire(conteneur_dico, i), conteneur_dico)){ // NON
+char choix_lettre_robot(const char mot[], const ConteneurTDE& conteneur_dico) {
+    char mot_dico[MAX_LETTRES_MOT+1];
+    for(uint i=conteneur_dico.nb_it_sto-1 ; i >= 0; --i) {
+        // a l'envers moins de parties perdues
+        strcpy(mot_dico, lire(conteneur_dico, i));
+        if(verif_correspondance_mot(mot_dico, mot) && (strlen(mot_dico) > strlen(mot)+1)
+        /* && le mot contitué de mot + la lettre choisie existe pas */){
             //A REFAIRE : DICHOTOMIE
-            //ISOLER LES MOTS QuI COMMENCENT PAR LA LETTRE ??
+            //ISOLER LES MOTS QUI COMMENCENT PAR LA LETTRE ??
             //1 est ce que le mot existe
             //2 si non quel lettre parmi les 26 lettre de l alphabet.
-            return lire(conteneur_dico, i)[strlen(mot)];
+            return mot_dico[strlen(mot)];
         }
     }
     return '?';
 }
 
-char* choix_mot_robot(const char mot[], ConteneurTDE& conteneur_dico) {
+char* choix_mot_robot(const char mot[], const ConteneurTDE& conteneur_dico) {
     // a faire
     return (char*)"CHEVAL";
 }

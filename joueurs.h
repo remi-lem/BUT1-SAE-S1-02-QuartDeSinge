@@ -70,7 +70,7 @@ void initialiser_struct_joueurs(Joueurs &struct_joueurs, const uint taille_char_
  * @param indice_joueur l'indice du joueur actuel
  * @return l'indice du joueur précédent, sinon -1
  */
-uint indice_joueur_precedent(Joueurs& struct_joueurs, uint indice_joueur);
+uint indice_joueur_precedent(const Joueurs& struct_joueurs, const uint indice_joueur);
 
 /**
  * @brief Recherche de le numéro du joueur précédent
@@ -78,6 +78,6 @@ uint indice_joueur_precedent(Joueurs& struct_joueurs, uint indice_joueur);
  * @param indice_joueur l'indice du joueur actuel
  * @return le numero du joueur précédent, sinon -1
  */
-uint numero_joueur_precedent(Joueurs& struct_joueurs, uint indice_joueur);
+uint numero_joueur_precedent(const Joueurs& struct_joueurs, const uint indice_joueur);
 
 #endif //BUT1_SAE_S1_02_JOUEURS_H

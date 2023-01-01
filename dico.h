@@ -11,11 +11,8 @@
  * mettre ../ods4 pour compiler dans CLion
  * mettre direct ods4 pour compiler avec g++
 */
-//#if __CLION_IDE__
-//#define HOME_DICO "../ods4.txt"
-//#else
-#define HOME_DICO "ods4.txt"
-//#endif
+#define HOME_DICO "../ods4.txt"
+//#define HOME_DICO "ods4.txt"
 
 #include <iostream>
 #include <fstream> // pour ifstream
@@ -41,35 +38,34 @@ enum {
 };
 
 /**
- * DOC A FAIRE
- * @param mot_manche
- * @return
+ * @brief Enregistrement du dictionnaire dans un ConteneurTDE
+ * @return le conteneurTDE qui contient le dictionnaire
  */
 ConteneurTDE dico_dans_conteneur();
 
 /**
- * DOC A FAIRE
- * @param mot_manche
+ * recherche de l'existence d'un mot dans le dictionnaire
+ * @param mot_manche le mot courant de la manche
  * @param conteneur_dico le conteneur du dictionnaire
- * @return
+ * @return vrai ou faux
  */
-bool recherche_existence_mot(const char mot[], ConteneurTDE& conteneur_dico);
+bool recherche_existence_mot(const char mot[], const ConteneurTDE& conteneur_dico);
 
 /**
- * DOC A FAIRE
- * @param mot_manche
+ * choix de la lettre complétnt le mot courant, utilisé par les robots
+ * @param mot_manche le mot en cours de construction
  * @param conteneur_dico le conteneur du dictionnaire
- * @return
+ * @return la lettre choisie
  */
-char choix_lettre_robot(const char mot[], ConteneurTDE& conteneur_dico);
+char choix_lettre_robot(const char mot[], const ConteneurTDE& conteneur_dico);
 
 /**
- * DOC A FAIRE
- * @param mot_manche
+ * choix du mot qui complète celui de la manche
+ * @param mot_manche le mot en cours de construction
  * @param conteneur_dico le conteneur du dictionnaire
- * @return
+ * @return un pointeur vers le permier caractère d'une chaine de caractères
  */
-char* choix_mot_robot(const char mot[], ConteneurTDE& conteneur_dico);
+char* choix_mot_robot(const char mot[], const ConteneurTDE& conteneur_dico);
 
 /**
  * @brief Vérification de la correspondance des lettres entre le mot en cours de construction et le mot proposé

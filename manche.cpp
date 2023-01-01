@@ -10,25 +10,10 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDE& conteneur_dico) {
     char mot_manche[MAX_LETTRES_MOT+1] = "";
     char mot_propose[MAX_LETTRES_MOT+1] = "";
     const char* ptr_mot_du_robot;
-    for(uint h=0; h<MAX_LETTRES_MOT; h++) {
+    while(strlen(mot_manche) <= MAX_LETTRES_MOT) {
         for (uint i = 0; i < struct_joueurs.nb_total; i++) {
-            cout << i + 1 << struct_joueurs.ordre_passage[i] << ", (";
-            cout << mot_manche;
-            cout << ") > ";
-            if (struct_joueurs.ordre_passage[i] == 'H') {
-                cin >> lettre_joueur;
-                cin.ignore(INT_MAX, '\n'); // on enlève ce qui dépasse
-            }
-            else if (struct_joueurs.ordre_passage[i] == 'R') {
-                lettre_joueur = choix_lettre_robot(mot_manche, conteneur_dico);
-                cout << lettre_joueur << endl;
-            }
-            else {
-                cout << "Erreur pour la manche. indice joueur : " << i << endl;
-                exit(1);
-            }
+            lettre_joueur = recup_aff_lettre(struct_joueurs, conteneur_dico, mot_manche, i);
 
-            lettre_joueur = (char)toupper(lettre_joueur);
             if (lettre_joueur == '?') {
                 cout << numero_joueur_precedent(struct_joueurs, i) <<
                 struct_joueurs.ordre_passage[indice_joueur_precedent(struct_joueurs, i)] <<
@@ -53,18 +38,41 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDE& conteneur_dico) {
             else {
                 strcpy(mot_manche,ajoute_lettre_au_mot(mot_manche, lettre_joueur));
             }
-            if(recherche_existence_mot(mot_manche, conteneur_dico)) {
-                cout << "le mot " << mot_manche << " existe, " << i+1 << struct_joueurs.ordre_passage[i] <<
-                     " prend un quart de singe" << endl;
-                addQuartDeSinge(struct_joueurs, i);
-                return;
+            if(strlen(mot_manche) > 2){
+                if(recherche_existence_mot(mot_manche, conteneur_dico)) {
+                    cout << "le mot " << mot_manche << " existe, " << i+1 << struct_joueurs.ordre_passage[i] <<
+                         " prend un quart de singe" << endl;
+                    addQuartDeSinge(struct_joueurs, i);
+                    return;
+                }
             }
         }
     }
     cout << "Mot de plus de 25 lettres impossible" << endl;
 }
 
-void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mot_manche[], const uint indice_joueur, ConteneurTDE& conteneur_dico) {
+char recup_aff_lettre(const Joueurs& struct_joueurs, const ConteneurTDE& conteneur_dico, const char* mot_manche, const uint indice) {
+    char lettre_joueur = ' ';
+    cout << indice + 1 << struct_joueurs.ordre_passage[indice] << ", (";
+    cout << mot_manche;
+    cout << ") > ";
+    if (struct_joueurs.ordre_passage[indice] == 'H') {
+        cin >> lettre_joueur;
+        cin.ignore(INT_MAX, '\n'); // on enlève ce qui dépasse
+    }
+    else if (struct_joueurs.ordre_passage[indice] == 'R') {
+        lettre_joueur = choix_lettre_robot(mot_manche, conteneur_dico);
+        cout << lettre_joueur << endl;
+    }
+    else {
+        cout << "Erreur pour la manche. indice joueur : " << indice << endl;
+        exit(1);
+    }
+    lettre_joueur = (char)toupper(lettre_joueur);
+    return lettre_joueur;
+}
+
+void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mot_manche[], const uint indice_joueur, const ConteneurTDE& conteneur_dico) {
     assert(indice_joueur >= 0);
     uint ind_joueur_perdant, num_joueur_perdant;
     bool correspondance_mot = verif_correspondance_mot(mot_propose, mot_manche);
