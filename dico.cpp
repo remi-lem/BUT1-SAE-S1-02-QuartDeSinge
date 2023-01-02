@@ -5,25 +5,6 @@
 
 #include "dico.h"
 
-// A UTILISER UNIQUEMENT POUR REFERENCE : SUPPRIMER QUAND LE PROGRAMME EST FONCTIONNEL
-void fonc_prof_dico_test() {
-    ifstream in(HOME_DICO); // on ouvre le fichier
-    if (!in) {
-        cout << "le dictionnaire n'a pu etre ouvert" << endl;
-    }
-    int nb = 0, longueur = 0;
-    const int MAX = 26;
-    char s[MAX];
-    in >> setw(MAX) >> s; // on essaye de lire le premier mot
-    while (in) {
-        ++nb; // ça s'est bien passé, on le compte
-        longueur += (int)strlen(s); // et on accumule sa longueur
-        in >> setw(MAX) >> s; // on essaye de lire le mot suivant
-    }
-    in.close(); // on ferme le fichier
-    cout << nb << " mots de " << (float)longueur / (float)nb << " car. en moyenne" << endl;
-}
-
 ConteneurTDE dico_dans_conteneur() {
     int capacite_cont_dico = 100, pas_cont_dico = 2; // modifier si besoin
     char mot[MAX_LETTRES_MOT];
@@ -63,7 +44,7 @@ char choix_lettre_robot(const char mot[], const ConteneurTDE& conteneur_dico) {
     while(debut < fin) {
         milieu = (uint)((debut+fin) / 2);
         strcpy(mot_dico, lire(conteneur_dico, milieu));
-        comparaison = strcmp(mot_dico, mot);//TODO : ne marche pas
+        comparaison = strcmp(mot_dico, mot);
         if(verif_correspondance_mot(mot_dico, mot) && (strlen(mot_dico) > strlen(mot)+1)) {
             return mot_dico[strlen(mot)];
         }
@@ -78,29 +59,33 @@ char choix_lettre_robot(const char mot[], const ConteneurTDE& conteneur_dico) {
             exit(1);
         }
     }
-
-    /*
-    for(uint i=conteneur_dico.nb_it_sto-1 ; i > 0; --i) {
-        // a l'envers moins de parties perdues
-        strcpy(mot_dico, lire(conteneur_dico, i));
-        if(verif_correspondance_mot(mot_dico, mot) && (strlen(mot_dico) > strlen(mot)+1)
-        // && le mot contitué de mot + la lettre choisie existe pas
-        ){
-            //A REFAIRE : DICHOTOMIE
-            //ISOLER LES MOTS QUI COMMENCENT PAR LA LETTRE ??
-            //1 est ce que le mot existe
-            //2 si non quel lettre parmi les 26 lettre de l alphabet.
-            return mot_dico[strlen(mot)];
-        }
-    }
-    */
-
     return '?';
 }
 
-char* choix_mot_robot(const char mot[], const ConteneurTDE& conteneur_dico) {
-    //TODO
-    return (char*)"CHEVAL";
+char* choix_mot_robot(const char mot[], char mot_dico[], const ConteneurTDE& conteneur_dico) {
+    uint debut = 0;
+    uint fin = conteneur_dico.nb_it_sto - 1; // pour avoir l'indice
+    uint milieu;
+    int comparaison;
+    while(debut < fin) {
+        milieu = (uint)((debut+fin) / 2);
+        strcpy(mot_dico, lire(conteneur_dico, milieu));
+        comparaison = strcmp(mot_dico, mot);
+        if(verif_correspondance_mot(mot_dico, mot)) {
+            return (char*)mot_dico;
+        }
+        else if(comparaison < 0) {
+            debut = milieu + 1;
+        }
+        else if(comparaison > 0) {
+            fin = milieu - 1;
+        }
+        else {
+            cerr << "Erreur de recherche dichotomique." << endl;
+            exit(1);
+        }
+    }
+    return (char*)"BIENJOUE";
 }
 
 bool verif_correspondance_mot(const char mot_long[], const char mot_court[]) {

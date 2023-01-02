@@ -6,7 +6,7 @@
 #include "manche.h"
 
 void lancement_manche(Joueurs& struct_joueurs, ConteneurTDE& conteneur_dico) {
-    char lettre_joueur = ' ';
+    char lettre_joueur;
     char mot_manche[MAX_LETTRES_MOT+1] = "";
     char mot_propose[MAX_LETTRES_MOT+1] = "";
     const char* ptr_mot_du_robot;
@@ -21,12 +21,19 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDE& conteneur_dico) {
             lettre_joueur = recup_aff_lettre(struct_joueurs, conteneur_dico, mot_manche, i);
 
             if (lettre_joueur == '?') {
+                if(strlen(mot_manche) == 0){
+                    cout << "ce n'est pas tres gentil, prends plutot un quart de singe !" << endl;
+                    addQuartDeSinge(struct_joueurs, i);
+                    struct_joueurs.indice_dernier_perdant = i;
+                    return;
+                }
                 cout << numero_joueur_precedent(struct_joueurs, i) <<
                 struct_joueurs.ordre_passage[indice_joueur_precedent(struct_joueurs, i)] <<
                 ", saisir le mot > ";
                 if (struct_joueurs.ordre_passage[indice_joueur_precedent(struct_joueurs, i)] == 'R') {
-                    ptr_mot_du_robot = choix_mot_robot(mot_manche, conteneur_dico);
+                    ptr_mot_du_robot = choix_mot_robot(mot_manche, mot_propose, conteneur_dico);
                     strcpy(mot_propose, ptr_mot_du_robot);
+                    cout << mot_propose;
                     cout << endl;
                 }
                 else {
@@ -103,7 +110,7 @@ void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mo
         addQuartDeSinge(struct_joueurs, indice_joueur);
         struct_joueurs.indice_dernier_perdant = indice_joueur;
     }
-    else if(!existence_mot) {
+    else {
         ind_joueur_perdant = indice_joueur_precedent(struct_joueurs, indice_joueur);
         num_joueur_perdant = numero_joueur_precedent(struct_joueurs, indice_joueur);
         cout << "le mot " << mot_propose << " n’existe pas, le joueur " << num_joueur_perdant <<

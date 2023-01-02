@@ -11,8 +11,8 @@
  * mettre ../ods4 pour compiler dans CLion
  * mettre direct ods4 pour compiler avec g++
 */
-//#define HOME_DICO "../ods4.txt"
-#define HOME_DICO "ods4.txt"
+#define HOME_DICO "../ods4.txt"
+//#define HOME_DICO "ods4.txt"
 
 #include <iostream>
 #include <fstream> // pour ifstream
@@ -58,7 +58,7 @@ char choix_lettre_robot(const char mot[], const ConteneurTDE& conteneur_dico);
  * @param conteneur_dico le conteneur du dictionnaire
  * @return un pointeur vers le permier caractère d'une chaine de caractères
  */
-char* choix_mot_robot(const char mot[], const ConteneurTDE& conteneur_dico);
+char* choix_mot_robot(const char mot[], char mot_dico[], const ConteneurTDE& conteneur_dico);
 
 /**
  * @brief Vérification de la correspondance des lettres entre le mot en cours de construction et le mot proposé
