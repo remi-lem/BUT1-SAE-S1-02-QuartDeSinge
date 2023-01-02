@@ -26,9 +26,37 @@ ConteneurTDEDico dico_dans_conteneur() {
 }
 
 bool recherche_existence_mot(const char mot[], const ConteneurTDEDico& conteneur_dico) {
+    /*
+    char mot_dico[MAX_LETTRES_MOT+1];
+    uint debut = 0;
+    uint fin = conteneur_dico.nb_it_sto - 1; // pour avoir l'indice
+    uint milieu;
+    int comparaison;
+    while(debut < fin) {
+        milieu = (uint)((debut+fin) / 2);
+        strcpy(mot_dico, lire(conteneur_dico, milieu));
+        comparaison = strcmp(mot_dico, mot);
+        if(comparaison == 0) {
+            return true;
+        }
+        else if(comparaison < 0) {
+            debut = milieu + 1;
+        }
+        else if(comparaison > 0) {
+            fin = milieu - 1;
+        }
+        else {
+            cerr << "Erreur de recherche dichotomique." << endl;
+            exit(1);
+        }
+    }
+    return false;
+    */
+
+    //TODO : recherche dicho pas fonctionelle
+
     for(uint i=0; i< conteneur_dico.nb_it_sto; ++i) {
         if(strcmp(lire(conteneur_dico, i), mot) == 0) {
-            //ici mettre une recherche dichotomique
             return true;
         }
     }

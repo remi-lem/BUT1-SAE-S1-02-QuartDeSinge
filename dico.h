@@ -11,8 +11,9 @@
  * mettre ../ods4 pour compiler dans CLion
  * mettre direct ods4 pour compiler avec g++
 */
-#define HOME_DICO "../ods4.txt"
-//#define HOME_DICO "ods4.txt"
+//TODO : changer avant le rendu
+//#define HOME_DICO "../ods4.txt"
+#define HOME_DICO "ods4.txt"
 
 #include <iostream>
 #include <fstream> // pour ifstream

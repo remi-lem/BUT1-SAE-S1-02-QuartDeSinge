@@ -7,8 +7,8 @@
 
 void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico) {
     char lettre_joueur;
-    char mot_manche[MAX_LETTRES_MOT+1] = "";
-    char mot_propose[MAX_LETTRES_MOT+1] = "";
+    char mot_manche[MAX_LETTRES_MOT+1] = "";//TODO : stoker mieux pour que ca puisse etre infini
+    char mot_propose[MAX_LETTRES_MOT+1] = "";//TODO : stoker mieux pour que ca puisse etre infini
     const char* ptr_mot_du_robot;
     bool premier_tour = true;
 
@@ -64,6 +64,7 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
         }
     }
     cout << "Mot de plus de 25 lettres impossible" << endl;
+    //TODO : enlever ca quand les mots seront infinis
 }
 
 char recup_aff_lettre(const Joueurs& struct_joueurs, const ConteneurTDEDico& conteneur_dico, const char* mot_manche, const uint indice) {

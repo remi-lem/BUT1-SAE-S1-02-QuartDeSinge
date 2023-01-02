@@ -1,6 +1,7 @@
-//
-// Created by remi on 25/12/22.
-//
+/**
+ * @file main.h
+ * @author Rémi
+ */
 
 #ifndef BUT1_SAE_S1_02_MAIN_H
 #define BUT1_SAE_S1_02_MAIN_H
