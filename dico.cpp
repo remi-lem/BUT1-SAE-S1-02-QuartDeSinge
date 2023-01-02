@@ -37,10 +37,17 @@ bool recherche_existence_mot(const char mot[], const ConteneurTDE& conteneur_dic
 
 char choix_lettre_robot(const char mot[], const ConteneurTDE& conteneur_dico) {
     char mot_dico[MAX_LETTRES_MOT+1];
+    char random_letter;
     uint debut = 0;
     uint fin = conteneur_dico.nb_it_sto - 1; // pour avoir l'indice
     uint milieu;
     int comparaison;
+
+    if(strlen(mot) == 0) {
+        srand(time(NULL));
+        random_letter = 'A' + (rand() % 26);
+        return random_letter;
+    }
     while(debut < fin) {
         milieu = (uint)((debut+fin) / 2);
         strcpy(mot_dico, lire(conteneur_dico, milieu));

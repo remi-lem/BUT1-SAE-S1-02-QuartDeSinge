@@ -80,7 +80,7 @@ char recup_aff_lettre(const Joueurs& struct_joueurs, const ConteneurTDE& contene
         cout << lettre_joueur << endl;
     }
     else {
-        cout << "Erreur pour la manche. indice joueur : " << indice << endl;
+        cerr << "Erreur pour la manche. indice joueur : " << indice << endl;
         exit(1);
     }
     lettre_joueur = (char)toupper(lettre_joueur);
