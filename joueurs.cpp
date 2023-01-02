@@ -6,6 +6,7 @@
 #include "joueurs.h"
 
 void initialiser_struct_joueurs(Joueurs &struct_joueurs, const uint taille_char_args) {
+    assert(taille_char_args >= 0);
     struct_joueurs.nb_robots = 0;
     struct_joueurs.nb_humains = 0;
     struct_joueurs.nb_total = 0;
@@ -19,6 +20,7 @@ void initialiser_struct_joueurs(Joueurs &struct_joueurs, const uint taille_char_
 
 
 uint indice_joueur_precedent(const Joueurs& struct_joueurs, const uint indice_joueur) {
+    assert(indice_joueur >= 0 && indice_joueur < struct_joueurs.nb_total);
     if(indice_joueur==0) {
         return struct_joueurs.nb_total-1;
     }
@@ -28,6 +30,7 @@ uint indice_joueur_precedent(const Joueurs& struct_joueurs, const uint indice_jo
 }
 
 uint numero_joueur_precedent(const Joueurs& struct_joueurs, const uint indice_joueur) {
+    assert(indice_joueur >= 0 && indice_joueur < struct_joueurs.nb_total);
     uint numero_joueur = indice_joueur+1;
     if(numero_joueur==1) {
         return struct_joueurs.nb_total;

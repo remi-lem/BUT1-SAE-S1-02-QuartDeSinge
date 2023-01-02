@@ -1,17 +1,17 @@
 /**
- * @file ConteneurTDE.h
+ * @file ConteneurTDEDico.h
  * @brief Composant d'un conteneur d'items de capacité extensible.
  */
 
-#ifndef BUT1_SAE_S1_02_CONTENEURTDE_H
-#define BUT1_SAE_S1_02_CONTENEURTDE_H
+#ifndef BUT1_SAE_S1_02_CONTENEURTDEDICO_H
+#define BUT1_SAE_S1_02_CONTENEURTDEDICO_H
 
 typedef char* Item;
 
 /** @brief Conteneur d'items alloués en mémoire dynamique
  *  de capacité extensible suivant un pas d'extension.
  */
-struct ConteneurTDE {
+struct ConteneurTDEDico {
     /// Capacité du conteneur (>0).
     unsigned int capacite;
     /// Pas d'extension du conteneur (>0).
@@ -32,14 +32,14 @@ struct ConteneurTDE {
  * @param [in] p Pas d'extension de capacité.
  * @pre capa > 0 et p > 0.
  */
-void initialiser(ConteneurTDE& c, unsigned int capa, unsigned int p);
+void initialiser(ConteneurTDEDico& c, unsigned int capa, unsigned int p);
 
 /**
  * @brief Désalloue un conteneur d'items en mémoire dynamique.
  * @see initialiser.
  * @param[in,out] c Le conteneur d'items.
  */
-void detruire(ConteneurTDE& c);
+void detruire(ConteneurTDEDico& c);
 
 /**
  * @brief Lecture d'un item d'un conteneur d'items.
@@ -48,7 +48,7 @@ void detruire(ConteneurTDE& c);
  * @return L'item à la position i.
  * @pre i < c.capacite
  */
-Item lire(const ConteneurTDE& c, unsigned int i);
+Item lire(const ConteneurTDEDico& c, unsigned int i);
 
 /**
  * @brief Ecrire un item dans un conteneur d'items.
@@ -56,6 +56,6 @@ Item lire(const ConteneurTDE& c, unsigned int i);
  * @param[in] i La position où ajouter/modifier l'item.
  * @param[in] it L'item à écrire.
  */
-void ecrire(ConteneurTDE& c, unsigned int i, const Item& it);
+void ecrire(ConteneurTDEDico& c, unsigned int i, const Item& it);
 
-#endif //BUT1_SAE_S1_02_CONTENEURTDE_H
+#endif //BUT1_SAE_S1_02_CONTENEURTDEDICO_H

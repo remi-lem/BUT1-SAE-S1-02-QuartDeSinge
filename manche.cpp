@@ -5,7 +5,7 @@
 
 #include "manche.h"
 
-void lancement_manche(Joueurs& struct_joueurs, ConteneurTDE& conteneur_dico) {
+void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico) {
     char lettre_joueur;
     char mot_manche[MAX_LETTRES_MOT+1] = "";
     char mot_propose[MAX_LETTRES_MOT+1] = "";
@@ -66,7 +66,8 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDE& conteneur_dico) {
     cout << "Mot de plus de 25 lettres impossible" << endl;
 }
 
-char recup_aff_lettre(const Joueurs& struct_joueurs, const ConteneurTDE& conteneur_dico, const char* mot_manche, const uint indice) {
+char recup_aff_lettre(const Joueurs& struct_joueurs, const ConteneurTDEDico& conteneur_dico, const char* mot_manche, const uint indice) {
+    assert(indice >= 0 && indice < struct_joueurs.nb_total);
     char lettre_joueur = ' ';
     cout << indice + 1 << struct_joueurs.ordre_passage[indice] << ", (";
     cout << mot_manche;
@@ -87,7 +88,8 @@ char recup_aff_lettre(const Joueurs& struct_joueurs, const ConteneurTDE& contene
     return lettre_joueur;
 }
 
-void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mot_manche[], const uint indice_joueur, const ConteneurTDE& conteneur_dico) {
+void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mot_manche[], const uint indice_joueur, const ConteneurTDEDico& conteneur_dico) {
+    assert(indice_joueur >= 0 && indice_joueur < struct_joueurs.nb_total);
     assert(indice_joueur >= 0);
     uint ind_joueur_perdant, num_joueur_perdant;
     bool correspondance_mot = verif_correspondance_mot(mot_propose, mot_manche);
@@ -122,6 +124,7 @@ void verifie_qui_perd(Joueurs& struct_joueurs, char mot_propose[], const char mo
 
 
 void addQuartDeSinge(Joueurs& struct_joueurs, const uint indice) {
+    assert(indice >= 0 && indice < struct_joueurs.nb_total);
     assert(indice >= 0);
     struct_joueurs.pointsSingeJoueur[indice].pointsDeSinge += 0.25;
 }

@@ -5,12 +5,12 @@
 
 #include "dico.h"
 
-ConteneurTDE dico_dans_conteneur() {
+ConteneurTDEDico dico_dans_conteneur() {
     int capacite_cont_dico = 100, pas_cont_dico = 2; // modifier si besoin
     char mot[MAX_LETTRES_MOT];
     Item ptr_mot_courant;
     uint indice = 0;
-    ConteneurTDE conteneur_dico;
+    ConteneurTDEDico conteneur_dico;
     initialiser(conteneur_dico, capacite_cont_dico, pas_cont_dico);
     ifstream in(HOME_DICO);
     in >> setw(MAX_LETTRES_MOT) >> mot;
@@ -25,7 +25,7 @@ ConteneurTDE dico_dans_conteneur() {
     return conteneur_dico;
 }
 
-bool recherche_existence_mot(const char mot[], const ConteneurTDE& conteneur_dico) {
+bool recherche_existence_mot(const char mot[], const ConteneurTDEDico& conteneur_dico) {
     for(uint i=0; i< conteneur_dico.nb_it_sto; ++i) {
         if(strcmp(lire(conteneur_dico, i), mot) == 0) {
             //ici mettre une recherche dichotomique
@@ -35,7 +35,7 @@ bool recherche_existence_mot(const char mot[], const ConteneurTDE& conteneur_dic
     return false;
 }
 
-char choix_lettre_robot(const char mot[], const ConteneurTDE& conteneur_dico) {
+char choix_lettre_robot(const char mot[], const ConteneurTDEDico& conteneur_dico) {
     char mot_dico[MAX_LETTRES_MOT+1];
     char random_letter;
     uint debut = 0;
@@ -69,7 +69,7 @@ char choix_lettre_robot(const char mot[], const ConteneurTDE& conteneur_dico) {
     return '?';
 }
 
-char* choix_mot_robot(const char mot[], char mot_dico[], const ConteneurTDE& conteneur_dico) {
+char* choix_mot_robot(const char mot[], char mot_dico[], const ConteneurTDEDico& conteneur_dico) {
     uint debut = 0;
     uint fin = conteneur_dico.nb_it_sto - 1; // pour avoir l'indice
     uint milieu;

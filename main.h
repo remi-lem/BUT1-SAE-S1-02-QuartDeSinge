@@ -9,9 +9,9 @@
 
 /**
  * @brief Traitement des arguments passés en ligne de commande pour lancer le programme
- * @param argc le nombre d'arguments
- * @param argv le tableau contenant les arguments
- * @param struct_joueurs une référence vers la structure des joueurs
+ * @param[in] argc le nombre d'arguments
+ * @param[in] argv le tableau contenant les arguments
+ * @param[in,out] struct_joueurs une référence vers la structure des joueurs
  * @return une valeur de l'énumération des joueurs
  * @see énumération dans joueurs.h
  */

@@ -9,7 +9,7 @@
 #include <iostream>
 #include <cstring>
 
-//#include "dico.h"
+#include <cassert>
 
 /**
  * @brief pour éviter d'écrire std::cin et std::cout
@@ -59,24 +59,27 @@ const int MIN_JOUEURS = 2;
 
 /**
  * @brief Initialisation de la structure des joueurs
- * @param struct_joueurs une référence vers la structure
- * @param taille_char_args la taille de la chaine des caractères contenant les H et les R
+ * @param[in,out] struct_joueurs une référence vers la structure
+ * @param[in] taille_char_args la taille de la chaine des caractères contenant les H et les R
+ * @pre taille_char_args >= 0
  */
 void initialiser_struct_joueurs(Joueurs &struct_joueurs, const uint taille_char_args);
 
 
 /**
  * @brief Recherche de l'indice du joueur précédent
- * @param struct_joueurs une référence vers la structure des étudiants
- * @param indice_joueur l'indice du joueur actuel
+ * @param[in] struct_joueurs une référence vers la structure des étudiants
+ * @param[in] indice_joueur l'indice du joueur actuel
+ * @pre indice compris entre 0 et le nombre de joueurs
  * @return l'indice du joueur précédent, sinon -1
  */
 uint indice_joueur_precedent(const Joueurs& struct_joueurs, const uint indice_joueur);
 
 /**
  * @brief Recherche de le numéro du joueur précédent
- * @param struct_joueurs une référence vers la structure des étudiants
- * @param indice_joueur l'indice du joueur actuel
+ * @param[in] struct_joueurs une référence vers la structure des étudiants
+ * @param[in] indice_joueur l'indice du joueur actuel
+ * @pre indice compris entre 0 et le nombre de joueurs
  * @return le numero du joueur précédent, sinon -1
  */
 uint numero_joueur_precedent(const Joueurs& struct_joueurs, const uint indice_joueur);
