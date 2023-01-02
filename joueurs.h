@@ -37,6 +37,7 @@ struct Joueurs {
     uint nb_total = 0;
     char* ordre_passage = NULL;
     PointsSinge* pointsSingeJoueur = NULL;
+    uint indice_dernier_perdant = 0;
 };
 
 /**

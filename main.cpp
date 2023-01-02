@@ -12,7 +12,6 @@
 int main(int argc, const char* argv[]) {
     Joueurs struct_joueurs;
     uint result_traitement_arguments;
-    //fonc_prof_traitement_arguments(argc, argv);
     result_traitement_arguments = traitement_arguments(argc, argv, struct_joueurs);
     switch (result_traitement_arguments) {
         case(DICO_PAS_OUVERT):

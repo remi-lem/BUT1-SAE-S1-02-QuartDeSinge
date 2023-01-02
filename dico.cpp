@@ -56,11 +56,36 @@ bool recherche_existence_mot(const char mot[], const ConteneurTDE& conteneur_dic
 
 char choix_lettre_robot(const char mot[], const ConteneurTDE& conteneur_dico) {
     char mot_dico[MAX_LETTRES_MOT+1];
-    for(uint i=conteneur_dico.nb_it_sto-1 ; i >= 0; --i) {
+    uint debut = 0;
+    uint fin = conteneur_dico.nb_it_sto - 1; // pour avoir l'indice
+    uint milieu;
+    int comparaison;
+    while(debut < fin) {
+        milieu = (uint)((debut+fin) / 2);
+        strcpy(mot_dico, lire(conteneur_dico, milieu));
+        comparaison = strcmp(mot_dico, mot);//TODO : ne marche pas
+        if(verif_correspondance_mot(mot_dico, mot) && (strlen(mot_dico) > strlen(mot)+1)) {
+            return mot_dico[strlen(mot)];
+        }
+        else if(comparaison < 0) {
+            debut = milieu + 1;
+        }
+        else if(comparaison > 0) {
+            fin = milieu - 1;
+        }
+        else {
+            cerr << "Erreur de recherche dichotomique." << endl;
+            exit(1);
+        }
+    }
+
+    /*
+    for(uint i=conteneur_dico.nb_it_sto-1 ; i > 0; --i) {
         // a l'envers moins de parties perdues
         strcpy(mot_dico, lire(conteneur_dico, i));
         if(verif_correspondance_mot(mot_dico, mot) && (strlen(mot_dico) > strlen(mot)+1)
-        /* && le mot contitué de mot + la lettre choisie existe pas */){
+        // && le mot contitué de mot + la lettre choisie existe pas
+        ){
             //A REFAIRE : DICHOTOMIE
             //ISOLER LES MOTS QUI COMMENCENT PAR LA LETTRE ??
             //1 est ce que le mot existe
@@ -68,11 +93,13 @@ char choix_lettre_robot(const char mot[], const ConteneurTDE& conteneur_dico) {
             return mot_dico[strlen(mot)];
         }
     }
+    */
+
     return '?';
 }
 
 char* choix_mot_robot(const char mot[], const ConteneurTDE& conteneur_dico) {
-    // a faire
+    //TODO
     return (char*)"CHEVAL";
 }
 

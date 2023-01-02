@@ -1,112 +1,33 @@
-1H, () > 2H, (A) > 3H, (AD) > 4H, (ADV) > 5H, (ADVE) > 6H, (ADVER) > 1H, (ADVERS) > 2H, (ADVERSI) > 3H, (ADVERSIT) > 4H, (ADVERSITE) > 5H, (ADVERSITEA) > 6H, (ADVERSITEAG) > 1H, (ADVERSITEAGH) > 2H, (ADVERSITEAGHQ) > 1H saisir le mot > le mot AGI ne commence pas par les lettres attendues, le joueur 1H prend un quart de singe
-1H : 0.25; 2H : 0; 3H : 0; 4H : 0; 5H : 0; 6H : 0
-1H, () > 2H, (A) > 3H, (AT) > 4H, (ATC) > 5H, (ATCH) > 6H, (ATCHO) > 1H, (ATCHOU) > 6H saisir le mot > Le mot ATCHOUM existe, 1H prend un quart de singe
-1H : 0.5; 2H : 0; 3H : 0; 4H : 0; 5H : 0; 6H : 0
-1H, () > 2H, (A) > 3H, (AT) > 4H, (ATO) > 5H, (ATOC) > Le joueur 5H abandonne la manche et prend un quart de singe
-1H : 0.5; 2H : 0; 3H : 0; 4H : 0; 5H : 0.25; 6H : 0
-1H, () > 2H, (A) > 3H, (AD) > 4H, (ADS) > 5H, (ADSO) > 6H, (ADSOR) > 1H, (ADSORB) > 2H, (ADSORBI) > 3H, (ADSORBIO) > 4H, (ADSORBION) > 3H saisir le mot > Le mot ADSORBIONS existe, 4H prend un quart de singe
-1H : 0.5; 2H : 0; 3H : 0; 4H : 0.25; 5H : 0.25; 6H : 0
-1H, () > 2H, (A) > 3H, (AL) > 4H, (ALV) > 5H, (ALVE) > 6H, (ALVEO) > 1H, (ALVEOL) > 2H, (ALVEOLI) > 3H, (ALVEOLIT) > 4H, (ALVEOLITD) > 3H saisir le mot > le mot ALVEOLITE ne commence pas par les lettres attendues, le joueur 3H prend un quart de singe
-1H : 0.5; 2H : 0; 3H : 0.25; 4H : 0.25; 5H : 0.25; 6H : 0
-1H, () > 2H, (A) > 3H, (AT) > 4H, (ATY) > 5H, (ATYP) > 6H, (ATYPI) > 1H, (ATYPIQ) > 2H, (ATYPIQU) > Le joueur 2H abandonne la manche et prend un quart de singe
-1H : 0.5; 2H : 0.25; 3H : 0.25; 4H : 0.25; 5H : 0.25; 6H : 0
-1H, () > 2H, (A) > 3H, (AF) > 4H, (AFA) > 5H, (AFAP) > 4H saisir le mot > le mot AFAT ne commence pas par les lettres attendues, le joueur 4H prend un quart de singe
-1H : 0.5; 2H : 0.25; 3H : 0.25; 4H : 0.5; 5H : 0.25; 6H : 0
-1H, () > 2H, (A) > 3H, (AC) > 4H, (ACC) > 5H, (ACCL) > 6H, (ACCLI) > 1H, (ACCLIM) > 2H, (ACCLIMA) > 3H, (ACCLIMAT) > 4H, (ACCLIMATO) > 5H, (ACCLIMATON) > Le joueur 5H abandonne la manche et prend un quart de singe
-1H : 0.5; 2H : 0.25; 3H : 0.25; 4H : 0.5; 5H : 0.5; 6H : 0
-1H, () > 2H, (A) > 3H, (AV) > 4H, (AVO) > 5H, (AVOC) > 6H, (AVOCA) > 1H, (AVOCAS) > 2H, (AVOCASS) > 3H, (AVOCASSI) > 4H, (AVOCASSIE) > 5H, (AVOCASSIEX) > 4H saisir le mot > le mot AVOCASSIEZ ne commence pas par les lettres attendues, le joueur 4H prend un quart de singe
-1H : 0.5; 2H : 0.25; 3H : 0.25; 4H : 0.75; 5H : 0.5; 6H : 0
-1H, () > 2H, (A) > 3H, (AT) > 4H, (ATA) > 5H, (ATAM) > 6H, (ATAMA) > 5H saisir le mot > Le mot ATAMAN existe, 6H prend un quart de singe
-1H : 0.5; 2H : 0.25; 3H : 0.25; 4H : 0.75; 5H : 0.5; 6H : 0.25
-1H, () > 2H, (A) > 3H, (AC) > 4H, (ACU) > 5H, (ACUT) > 6H, (ACUTA) > 1H, (ACUTAN) > 2H, (ACUTANG) > 3H, (ACUTANGL) > Le joueur 3H abandonne la manche et prend un quart de singe
-1H : 0.5; 2H : 0.25; 3H : 0.5; 4H : 0.75; 5H : 0.5; 6H : 0.25
-1H, () > 2H, (A) > 3H, (AP) > 4H, (APN) > 5H, (APNE) > 6H, (APNEI) > 1H, (APNEIQ) > 2H, (APNEIQU) > 3H, (APNEIQUE) > 4H, (APNEIQUEA) > 5H, (APNEIQUEAI) > 6H, (APNEIQUEAIO) > 1H, (APNEIQUEAIOL) > 6H saisir le mot > le mot AIOLI ne commence pas par les lettres attendues, le joueur 6H prend un quart de singe
-1H : 0.5; 2H : 0.25; 3H : 0.5; 4H : 0.75; 5H : 0.5; 6H : 0.5
-1H, () > 2H, (A) > 3H, (AB) > 4H, (ABE) > 5H, (ABEL) > 6H, (ABELI) > 1H, (ABELIE) > 2H, (ABELIEC) > 1H saisir le mot > le mot ABELIEN ne commence pas par les lettres attendues, le joueur 1H prend un quart de singe
-1H : 0.75; 2H : 0.25; 3H : 0.5; 4H : 0.75; 5H : 0.5; 6H : 0.5
-1H, () > 2H, (A) > 3H, (AA) > 4H, (AAK) > 3H saisir le mot > le mot AAS ne commence pas par les lettres attendues, le joueur 3H prend un quart de singe
-1H : 0.75; 2H : 0.25; 3H : 0.75; 4H : 0.75; 5H : 0.5; 6H : 0.5
-1H, () > 2H, ( ) > 3H, (  ) > 4H, (   ) > 5H, (    ) > 6H, (     ) > 1H, (      ) > 2H, (       ) > 3H, (        ) > 4H, (         ) > 5H, (          ) > 6H, (           ) > 1H, (            ) > 2H, (             ) > 3H, (              ) > 4H, (               ) > 5H, (                ) > 6H, (                 ) > 1H, (                  ) > 2H, (                   ) > 3H, (                    ) > 4H, (                     ) > 5H, (                      ) > 6H, (                       ) > 1H, (                        ) > 2H, (                         ) > 3H, (                          ÉäÝU) > 4H, (                          ÉäÝU ) > 5H, (                          ÉäÝU  ) > 6H, (                          ÉäÝU   ) > 1H, (                          ÉäÝU    ) > 2H, (                          ÉäÝU     ) > 3H, (                          ÉäÝU      ) > 4H, (                          ÉäÝU       ) > 5H, (                          ÉäÝU        ) > 6H, (                          ÉäÝU         ) > 1H, (                          ÉäÝU          ) > 2H, (                          ÉäÝU           ) > 3H, (                          ÉäÝU            ) > 4H, (                          ÉäÝU             ) > 5H, (                          ÉäÝU              ) > 6H, (                          ÉäÝU               ) > 1H, (                          ÉäÝU                ) > 2H, (                          ÉäÝU                 ) > 3H, (                          ÉäÝU                  ) > 4H, (                          ÉäÝU                   ) > 5H, (                          ÉäÝU                    ) > 6H, (                          ÉäÝU                     ) > 1H, (                          ÉäÝU                      ) > 2H, (                          ÉäÝU                       ) > 3H, (                          ÉäÝU                        ) > 4H, (                          ÉäÝU                         ) > 5H, (                          ÉäÝU                          ) > 6H, (                          ÉäÝU                           ) > 1H, (                          ÉäÝU                            ÉäÝU) > 2H, (                          ÉäÝU                            ÉäÝU ) > 3H, (                          ÉäÝU                            ÉäÝU  ) > 4H, (                          ÉäÝU                            ÉäÝU   ) > 5H, (                          ÉäÝU                            ÉäÝU    ) > 6H, (                          ÉäÝU                            ÉäÝU     §) > 1H, (                          ÉäÝU                            ÉäÝU     § ) > 2H, (                          ÉäÝU                            ÉäÝU     §  ) > 3H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU) > 4H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU ) > 5H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU) > 6H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU ) > 1H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ) > 2H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ ) > 3H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU) > 4H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU ) > 5H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU  ) > 6H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§) > 1H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§ ) > 2H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§  ) > 3H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ) > 4H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ ) > 5H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_) > 6H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_ ) > 1H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_  ) > 2H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_   ) > 3H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§) > 4H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§ ) > 5H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ) > 6H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ ) > 1H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ  ) > 2H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ) > 3H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ ) > 4H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU) > 5H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU ) > 6H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ) > 1H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ ) > 2H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä) > 3H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä ) > 4H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä  ) > 5H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä   ) > 6H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä    ) > 1H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä     ) > 2H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä      ) > 3H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä       ) > 4H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä        ) > 5H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä         ) > 6H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä) > 1H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä ) > 2H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä  ) > 3H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä   ) > 4H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä    ) > 5H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä     ) > 6H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä      ) > 1H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä       ) > 2H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä        ) > 3H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä         ) > 4H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä          ) > 5H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä           ) > 6H, (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä            ) > 7 , (                          ÉäÝU                            ÉäÝU     §   Ûß…¢—”
-`ŒÉäÝU   sÉäÝU  Ð¨Ì=ÿ  i†ÉäÝU   ÇŠi§   ©Ì=ÿ  þ_     Óh§  à¨Ì=ÿ   Ûß…¢—”
-0©Ì=ÿ  [‰ÉäÝU  (ªÌ=ÿ  PŒÉä          ­ŒÉä             ÝU) > Erreur pour la manche. indice joueur : 6
+1H, () > 2H, (A) > 3H, (AD) > 4H, (ADV) > 5H, (ADVE) > 6H, (ADVER) > 1H, (ADVERS) > 2H, (ADVERSI) > 3H, (ADVERSIT) > le mot ADVERSITE existe, le joueur 3H prend un quart de singe
+1H : 0; 2H : 0; 3H : 0.25; 4H : 0; 5H : 0; 6H : 0
+3H, () > 4H, (A) > 5H, (AG) > 6H, (AGH) > 1H, (AGHQ) > 6H, saisir le mot > le mot AGI ne commence pas par les lettres attendues, le joueur 6H prend un quart de singe
+1H : 0; 2H : 0; 3H : 0.25; 4H : 0; 5H : 0; 6H : 0.25
+6H, () > 1H, (A) > 2H, (AT) > 3H, (ATC) > 4H, (ATCH) > 5H, (ATCHO) > 6H, (ATCHOU) > 5H, saisir le mot > le mot ATCHOUM existe, le joueur 6H prend un quart de singe
+1H : 0; 2H : 0; 3H : 0.25; 4H : 0; 5H : 0; 6H : 0.5
+6H, () > 1H, (A) > 2H, (AT) > 3H, (ATO) > 4H, (ATOC) > le joueur 4H abandonne la manche et prend un quart de singe
+1H : 0; 2H : 0; 3H : 0.25; 4H : 0.25; 5H : 0; 6H : 0.5
+4H, () > 5H, (A) > 6H, (AD) > 1H, (ADS) > 2H, (ADSO) > 3H, (ADSOR) > 4H, (ADSORB) > 5H, (ADSORBI) > 6H, (ADSORBIO) > 1H, (ADSORBION) > 6H, saisir le mot > le mot ADSORBIONS existe, le joueur 1H prend un quart de singe
+1H : 0.25; 2H : 0; 3H : 0.25; 4H : 0.25; 5H : 0; 6H : 0.5
+1H, () > 2H, (A) > 3H, (AL) > 4H, (ALV) > 5H, (ALVE) > 6H, (ALVEO) > 1H, (ALVEOL) > 2H, (ALVEOLI) > 3H, (ALVEOLIT) > 4H, (ALVEOLITD) > 3H, saisir le mot > le mot ALVEOLITE ne commence pas par les lettres attendues, le joueur 3H prend un quart de singe
+1H : 0.25; 2H : 0; 3H : 0.5; 4H : 0.25; 5H : 0; 6H : 0.5
+3H, () > 4H, (A) > 5H, (AT) > 6H, (ATY) > 1H, (ATYP) > 2H, (ATYPI) > 3H, (ATYPIQ) > 4H, (ATYPIQU) > le joueur 4H abandonne la manche et prend un quart de singe
+1H : 0.25; 2H : 0; 3H : 0.5; 4H : 0.5; 5H : 0; 6H : 0.5
+4H, () > 5H, (A) > 6H, (AF) > 1H, (AFA) > 2H, (AFAP) > 1H, saisir le mot > le mot AFAT ne commence pas par les lettres attendues, le joueur 1H prend un quart de singe
+1H : 0.5; 2H : 0; 3H : 0.5; 4H : 0.5; 5H : 0; 6H : 0.5
+1H, () > 2H, (A) > 3H, (AC) > 4H, (ACC) > 5H, (ACCL) > 6H, (ACCLI) > 1H, (ACCLIM) > 2H, (ACCLIMA) > 3H, (ACCLIMAT) > 4H, (ACCLIMATO) > 5H, (ACCLIMATON) > le joueur 5H abandonne la manche et prend un quart de singe
+1H : 0.5; 2H : 0; 3H : 0.5; 4H : 0.5; 5H : 0.25; 6H : 0.5
+5H, () > 6H, (A) > 1H, (AV) > 2H, (AVO) > 3H, (AVOC) > 4H, (AVOCA) > 5H, (AVOCAS) > 6H, (AVOCASS) > 1H, (AVOCASSI) > 2H, (AVOCASSIE) > 3H, (AVOCASSIEX) > 2H, saisir le mot > le mot AVOCASSIEZ ne commence pas par les lettres attendues, le joueur 2H prend un quart de singe
+1H : 0.5; 2H : 0.25; 3H : 0.5; 4H : 0.5; 5H : 0.25; 6H : 0.5
+2H, () > 3H, (A) > 4H, (AT) > 5H, (ATA) > 6H, (ATAM) > 1H, (ATAMA) > 6H, saisir le mot > le mot ATAMAN existe, le joueur 1H prend un quart de singe
+1H : 0.75; 2H : 0.25; 3H : 0.5; 4H : 0.5; 5H : 0.25; 6H : 0.5
+1H, () > 2H, (A) > 3H, (AC) > 4H, (ACU) > 5H, (ACUT) > 6H, (ACUTA) > 1H, (ACUTAN) > 2H, (ACUTANG) > 3H, (ACUTANGL) > le joueur 3H abandonne la manche et prend un quart de singe
+1H : 0.75; 2H : 0.25; 3H : 0.75; 4H : 0.5; 5H : 0.25; 6H : 0.5
+3H, () > 4H, (A) > 5H, (AP) > 6H, (APN) > 1H, (APNE) > 2H, (APNEI) > 3H, (APNEIQ) > 4H, (APNEIQU) > le mot APNEIQUE existe, le joueur 4H prend un quart de singe
+1H : 0.75; 2H : 0.25; 3H : 0.75; 4H : 0.75; 5H : 0.25; 6H : 0.5
+4H, () > 5H, (A) > 6H, (AI) > 1H, (AIO) > 2H, (AIOL) > 1H, saisir le mot > le mot AIOLI existe, le joueur 2H prend un quart de singe
+1H : 0.75; 2H : 0.5; 3H : 0.75; 4H : 0.75; 5H : 0.25; 6H : 0.5
+2H, () > 3H, (A) > 4H, (AB) > 5H, (ABE) > 6H, (ABEL) > 1H, (ABELI) > 2H, (ABELIE) > 3H, (ABELIEC) > 2H, saisir le mot > le mot ABELIEN ne commence pas par les lettres attendues, le joueur 2H prend un quart de singe
+1H : 0.75; 2H : 0.75; 3H : 0.75; 4H : 0.75; 5H : 0.25; 6H : 0.5
+2H, () > 3H, (A) > 4H, (AA) > 5H, (AAK) > 4H, saisir le mot > le mot AAS ne commence pas par les lettres attendues, le joueur 4H prend un quart de singe
+1H : 0.75; 2H : 0.75; 3H : 0.75; 4H : 1; 5H : 0.25; 6H : 0.5
+La partie est finie

@@ -1,16 +1,22 @@
-1H, () > 2R, (A) > A
-le mot AA existe, 2R prend un quart de singe
-1H : 0; 2R : 0.25; 3H : 0; 4R : 0
-1H, () > 2R, (A) > A
-le mot AA existe, 2R prend un quart de singe
-1H : 0; 2R : 0.5; 3H : 0; 4R : 0
-1H, () > 4R saisir le mot > 
-Le mot CHEVAL existe, 1H prend un quart de singe
-1H : 0.25; 2R : 0.5; 3H : 0; 4R : 0
-1H, () > 2R, (A) > A
-le mot AA existe, 2R prend un quart de singe
-1H : 0.25; 2R : 0.75; 3H : 0; 4R : 0
-1H, () > 2R, (A) > A
-le mot AA existe, 2R prend un quart de singe
-1H : 0.25; 2R : 1; 3H : 0; 4R : 0
+1H, () > 2R, (A) > Z
+3H, (AZ) > 4R, (AZA) > L
+1H, (AZAL) > 4R saisir le mot > 
+le mot CHEVAL ne commence pas par les lettres attendues, le joueur 4R prend un quart de singe
+1H : 0; 2R : 0; 3H : 0; 4R : 0.25
+1H, () > 2R, (A) > Z
+3H, (AZ) > 4R, (AZA) > L
+1H, (AZAL) > 2R, (AZALA) > ?
+1H saisir le mot > le mot A ne commence pas par les lettres attendues, le joueur 1H prend un quart de singe
+1H : 0.25; 2R : 0; 3H : 0; 4R : 0.25
+1H, () > 2R, (A) > Z
+3H, (AZ) > 4R, (AZA) > L
+1H, (AZAL) > 2R, (AZAL ) > ?
+1H saisir le mot > le mot  ne commence pas par les lettres attendues, le joueur 1H prend un quart de singe
+1H : 0.5; 2R : 0; 3H : 0; 4R : 0.25
+1H, () > 2R, ( ) > ?
+1H saisir le mot > le mot  ne commence pas par les lettres attendues, le joueur 1H prend un quart de singe
+1H : 0.75; 2R : 0; 3H : 0; 4R : 0.25
+1H, () > 2R, ( ) > ?
+1H saisir le mot > le mot  ne commence pas par les lettres attendues, le joueur 1H prend un quart de singe
+1H : 1; 2R : 0; 3H : 0; 4R : 0.25
 La partie est finie
