@@ -7,12 +7,16 @@
 
 void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico) {
     char lettre_joueur;
-    char mot_manche[MAX_LETTRES_MOT+1] = "";//TODO : stoker mieux pour que ca puisse etre infini
-    char mot_propose[MAX_LETTRES_MOT+1] = "";//TODO : stoker mieux pour que ca puisse etre infini
+    char *mot_manche = new char[MAX_LETTRES_MOT+1];
+    char *mot_propose = new char[MAX_LETTRES_MOT+1];
     const char* ptr_mot_du_robot;
-    bool premier_tour = true;
+    uint longueur_des_mots = MAX_LETTRES_MOT;
+    bool premier_tour = true, on_continue = true;
 
-    while(strlen(mot_manche) <= MAX_LETTRES_MOT) {
+    strcpy(mot_manche, "");
+    strcpy(mot_propose, "");
+
+    while(on_continue) {
         for (uint i = 0; i < struct_joueurs.nb_total; i++) {
             if(premier_tour){
                 i = struct_joueurs.indice_dernier_perdant;
@@ -20,11 +24,19 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
             }
             lettre_joueur = recup_aff_lettre(struct_joueurs, conteneur_dico, mot_manche, i);
 
+            if(strlen(mot_manche) >= longueur_des_mots){
+                agranditMot(mot_manche);
+                agranditMot(mot_propose);
+                longueur_des_mots = longueur_des_mots * 2;
+            }
+
             if (lettre_joueur == '?') {
                 if(strlen(mot_manche) == 0){
                     cout << "ce n'est pas tres gentil, prends plutot un quart de singe !" << endl;
                     addQuartDeSinge(struct_joueurs, i);
                     struct_joueurs.indice_dernier_perdant = i;
+                    delete [] mot_manche;
+                    delete [] mot_propose;
                     return;
                 }
                 cout << numero_joueur_precedent(struct_joueurs, i) <<
@@ -37,9 +49,11 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
                     cout << endl;
                 }
                 else {
-                    cin >> mot_propose;
+                    cin >> mot_propose;//TODO CRASH : valgrind ?
                 }
                 verifie_qui_perd(struct_joueurs, mot_propose, mot_manche, i, conteneur_dico);
+                delete [] mot_manche;
+                delete [] mot_propose;
                 return;
             }
             else if(lettre_joueur == '!') {
@@ -47,6 +61,8 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
                      " abandonne la manche et prend un quart de singe" << endl;
                 addQuartDeSinge(struct_joueurs, i);
                 struct_joueurs.indice_dernier_perdant = i;
+                delete [] mot_manche;
+                delete [] mot_propose;
                 return;
             }
             else {
@@ -58,13 +74,15 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
                          " prend un quart de singe" << endl;
                     addQuartDeSinge(struct_joueurs, i);
                     struct_joueurs.indice_dernier_perdant = i;
+                    delete [] mot_manche;
+                    delete [] mot_propose;
                     return;
                 }
             }
         }
     }
-    cout << "Mot de plus de 25 lettres impossible" << endl;
-    //TODO : enlever ca quand les mots seront infinis
+    cerr << "Fin impossible ??" << endl;
+    exit(1);
 }
 
 char recup_aff_lettre(const Joueurs& struct_joueurs, const ConteneurTDEDico& conteneur_dico, const char* mot_manche, const uint indice) {
@@ -134,6 +152,22 @@ void mot_en_majuscules(char* mot) {
     for(uint i=0; i<strlen(mot); i++) {
         mot[i] = (char)toupper(mot[i]);
     }
+}
+
+void agranditMot(char *&mot) {
+    uint taille = strlen(mot);
+    int newTaille = taille * 2;
+    // Allouer de l'espace mémoire pour le nouveau mot
+    char *newMot = new char[newTaille];
+    // Copier les caractères du mot dans le nouveau mot
+    //for (int i = 0; i < taille; i++) {
+    //    newMot[i] = mot[i];
+    //}
+    strcpy(newMot, mot);
+    // Désallouer l'espace mémoire du mot original
+    delete[] mot;
+    // Mettre à jour la référence du mot et sa capacité
+    mot = newMot;
 }
 
 char* ajoute_lettre_au_mot(char mot_manche[], const char lettre_joueur) {

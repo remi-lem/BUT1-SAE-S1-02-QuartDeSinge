@@ -81,6 +81,7 @@ char choix_lettre_robot(const char mot[], const ConteneurTDEDico& conteneur_dico
         strcpy(mot_dico, lire(conteneur_dico, milieu));
         comparaison = strcmp(mot_dico, mot);
         if(verif_correspondance_mot(mot_dico, mot) && (strlen(mot_dico) > strlen(mot)+1)) {
+            //TODO : mot pas existant : ne pas le proposer
             return mot_dico[strlen(mot)];
         }
         else if(comparaison < 0) {

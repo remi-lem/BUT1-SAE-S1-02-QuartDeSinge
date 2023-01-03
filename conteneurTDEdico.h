@@ -6,6 +6,8 @@
 #ifndef BUT1_SAE_S1_02_CONTENEURTDEDICO_H
 #define BUT1_SAE_S1_02_CONTENEURTDEDICO_H
 
+#include "joueurs.h"
+
 typedef char* Item;
 
 /** @brief Conteneur d'items alloués en mémoire dynamique

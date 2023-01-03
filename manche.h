@@ -57,6 +57,12 @@ void addQuartDeSinge(Joueurs& struct_joueurs, const uint indice);
 void mot_en_majuscules(char* mot);
 
 /**
+ * @brief Agrandir le mot d'une certaine taille
+ * @param mot le mot à agrandir
+ */
+void agranditMot(char *&mot);
+
+/**
  * @brief Ajout d'une lettre au mot actuel
  * @param[in,out] mot_manche le mot jusqu'a présent
  * @param[in] lettre_joueur la lettre à ajouter au mot
