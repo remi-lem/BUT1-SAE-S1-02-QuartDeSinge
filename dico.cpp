@@ -26,16 +26,15 @@ ConteneurTDEDico dico_dans_conteneur() {
 }
 
 bool recherche_existence_mot(const char mot[], const ConteneurTDEDico& conteneur_dico) {
-    /*
-    char mot_dico[MAX_LETTRES_MOT+1];
+    //char mot_dico[MAX_LETTRES_MOT+1];
     uint debut = 0;
     uint fin = conteneur_dico.nb_it_sto - 1; // pour avoir l'indice
     uint milieu;
     int comparaison;
-    while(debut < fin) {
+    while(debut <= fin) {
         milieu = (uint)((debut+fin) / 2);
-        strcpy(mot_dico, lire(conteneur_dico, milieu));
-        comparaison = strcmp(mot_dico, mot);
+        //strcpy(mot_dico, lire(conteneur_dico, milieu));
+        comparaison = strcmp(lire(conteneur_dico, milieu), mot);
         if(comparaison == 0) {
             return true;
         }
@@ -51,20 +50,11 @@ bool recherche_existence_mot(const char mot[], const ConteneurTDEDico& conteneur
         }
     }
     return false;
-    */
-
-    //TODO : recherche dicho pas fonctionelle
-
-    for(uint i=0; i< conteneur_dico.nb_it_sto; ++i) {
-        if(strcmp(lire(conteneur_dico, i), mot) == 0) {
-            return true;
-        }
-    }
-    return false;
 }
 
 char choix_lettre_robot(const char mot[], const ConteneurTDEDico& conteneur_dico) {
     char mot_dico[MAX_LETTRES_MOT+1];
+    char mot_retour[MAX_LETTRES_MOT+1];
     char random_letter;
     uint debut = 0;
     uint fin = conteneur_dico.nb_it_sto - 1; // pour avoir l'indice
@@ -76,13 +66,18 @@ char choix_lettre_robot(const char mot[], const ConteneurTDEDico& conteneur_dico
         random_letter = 'A' + (rand() % 26);
         return random_letter;
     }
-    while(debut < fin) {
+    while(debut <= fin) {
         milieu = (uint)((debut+fin) / 2);
         strcpy(mot_dico, lire(conteneur_dico, milieu));
         comparaison = strcmp(mot_dico, mot);
         if(verif_correspondance_mot(mot_dico, mot) && (strlen(mot_dico) > strlen(mot)+1)) {
-            //TODO : si mot pas existant, ne pas le proposer
-            return mot_dico[strlen(mot)];
+            strcpy(mot_retour, mot);
+            mot_retour[strlen(mot)] = mot_dico[strlen(mot)];
+            mot_retour[strlen(mot)+1] = '\0';
+            //if(!recherche_existence_mot(mot_retour, conteneur_dico)) {
+            //TODO ordi qui décole quand c'est activé
+                return mot_dico[strlen(mot)];
+            //}
         }
         else if(comparaison < 0) {
             debut = milieu + 1;
@@ -103,7 +98,7 @@ char* choix_mot_robot(const char mot[], char mot_dico[], const ConteneurTDEDico&
     uint fin = conteneur_dico.nb_it_sto - 1; // pour avoir l'indice
     uint milieu;
     int comparaison;
-    while(debut < fin) {
+    while(debut <= fin) {
         milieu = (uint)((debut+fin) / 2);
         strcpy(mot_dico, lire(conteneur_dico, milieu));
         comparaison = strcmp(mot_dico, mot);

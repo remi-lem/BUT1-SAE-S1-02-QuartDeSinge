@@ -28,9 +28,7 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
                 //TODO : mettre dans ajoute_lettre_au_mot ?
                 //-1 car \0 en fin de chaine
                 agranditMot(mot_manche);
-                //agranditMot(mot_propose);//TODO : mettre ou pas
                 longueur_max_mot_manche = longueur_max_mot_manche + MAX_LETTRES_MOT;
-                //TODO : a 50 char pile ca crash
             }
 
             if (lettre_joueur == '?') {
@@ -52,7 +50,7 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
                     cout << endl;
                 }
                 else {
-                    cin >> setw(MAX_LETTRES_MOT) >> mot_propose;//TODO CRASH : valgrind ?
+                    cin >> setw(MAX_LETTRES_MOT) >> mot_propose;
                     cin.ignore(INT_MAX, '\n'); // on enlève ce qui dépasse
                 }
                 verifie_qui_perd(struct_joueurs, mot_propose, mot_manche, i, conteneur_dico);
@@ -161,25 +159,10 @@ void mot_en_majuscules(char* mot) {
 void agranditMot(char *&mot) {
     uint taille = strlen(mot);
     uint newTaille = taille + MAX_LETTRES_MOT;
-    // Allouer de l'espace mémoire pour le nouveau mot
-    char *newMot = new char[newTaille];//TODO : crash
-    // Copier les caractères du mot dans le nouveau mot
+    char *newMot = new char[newTaille];
     strcpy(newMot, mot);
-    // Désallouer l'espace mémoire du mot original
     delete[] mot;
-    // Mettre à jour la référence du mot et sa capacité
     mot = newMot;
-}
-
-uint longueur_du_mot(const char* mot) {
-    //TODO : utile ? fonctione ?
-    uint indice = 0, longueur = 0;
-    while(mot[indice] != '\0') {
-        indice++;
-        //TODO : limite ? pour pas boucle infinie
-    }
-    longueur = indice + 1;
-    return longueur;
 }
 
 char* ajoute_lettre_au_mot(char mot_manche[], const char lettre_joueur) {
