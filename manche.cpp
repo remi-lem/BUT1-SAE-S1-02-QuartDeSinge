@@ -10,7 +10,7 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
     char *mot_manche = new char[MAX_LETTRES_MOT+1];
     char *mot_propose = new char[MAX_LETTRES_MOT+1];
     const char* ptr_mot_du_robot;
-    uint longueur_des_mots = MAX_LETTRES_MOT;
+    uint longueur_max_mot_manche = MAX_LETTRES_MOT;
     bool premier_tour = true, on_continue = true;
 
     strcpy(mot_manche, "");
@@ -24,10 +24,12 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
             }
             lettre_joueur = recup_aff_lettre(struct_joueurs, conteneur_dico, mot_manche, i);
 
-            if(strlen(mot_manche) >= longueur_des_mots){
+            if(strlen(mot_manche) >= longueur_max_mot_manche - 1){
+                //TODO : mettre dans ajoute_lettre_au_mot ?
+                //-1 car \0 en fin de chaine
                 agranditMot(mot_manche);
-                agranditMot(mot_propose);
-                longueur_des_mots = longueur_des_mots * 2;
+                //agranditMot(mot_propose);//TODO : mettre ou pas
+                longueur_max_mot_manche = longueur_max_mot_manche + MAX_LETTRES_MOT;
                 //TODO : a 50 char pile ca crash
             }
 
@@ -50,7 +52,8 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
                     cout << endl;
                 }
                 else {
-                    cin >> mot_propose;//TODO CRASH : valgrind ?
+                    cin >> setw(MAX_LETTRES_MOT) >> mot_propose;//TODO CRASH : valgrind ?
+                    cin.ignore(INT_MAX, '\n'); // on enlève ce qui dépasse
                 }
                 verifie_qui_perd(struct_joueurs, mot_propose, mot_manche, i, conteneur_dico);
                 delete [] mot_manche;
@@ -67,7 +70,7 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
                 return;
             }
             else {
-                strcpy(mot_manche,ajoute_lettre_au_mot(mot_manche, lettre_joueur));
+                strcpy(mot_manche, ajoute_lettre_au_mot(mot_manche, lettre_joueur));
             }
             if(strlen(mot_manche) > 2){
                 if(recherche_existence_mot(mot_manche, conteneur_dico)) {
@@ -157,15 +160,26 @@ void mot_en_majuscules(char* mot) {
 
 void agranditMot(char *&mot) {
     uint taille = strlen(mot);
-    int newTaille = taille + MAX_LETTRES_MOT;
+    uint newTaille = taille + MAX_LETTRES_MOT;
     // Allouer de l'espace mémoire pour le nouveau mot
-    char *newMot = new char[newTaille];
+    char *newMot = new char[newTaille];//TODO : crash
     // Copier les caractères du mot dans le nouveau mot
     strcpy(newMot, mot);
     // Désallouer l'espace mémoire du mot original
     delete[] mot;
     // Mettre à jour la référence du mot et sa capacité
     mot = newMot;
+}
+
+uint longueur_du_mot(const char* mot) {
+    //TODO : utile ? fonctione ?
+    uint indice = 0, longueur = 0;
+    while(mot[indice] != '\0') {
+        indice++;
+        //TODO : limite ? pour pas boucle infinie
+    }
+    longueur = indice + 1;
+    return longueur;
 }
 
 char* ajoute_lettre_au_mot(char mot_manche[], const char lettre_joueur) {

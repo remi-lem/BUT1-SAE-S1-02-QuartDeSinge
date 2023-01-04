@@ -12,8 +12,8 @@
  * mettre direct ods4 pour compiler avec g++
 */
 //TODO : changer avant le rendu
-//#define HOME_DICO "../ods4.txt"
-#define HOME_DICO "ods4.txt"
+#define HOME_DICO "../ods4.txt"
+//#define HOME_DICO "ods4.txt"
 
 #include <iostream>
 #include <fstream> // pour ifstream

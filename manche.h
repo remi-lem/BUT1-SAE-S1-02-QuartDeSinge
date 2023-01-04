@@ -63,6 +63,13 @@ void mot_en_majuscules(char* mot);
 void agranditMot(char *&mot);
 
 /**
+ * @brief Longueur d'une chaine de caractères
+ * @param[in] mot la chaine de caractères
+ * @return la longueur de la chaine
+ */
+uint longueur_du_mot(const char* mot);
+
+/**
  * @brief Ajout d'une lettre au mot actuel
  * @param[in,out] mot_manche le mot jusqu'a présent
  * @param[in] lettre_joueur la lettre à ajouter au mot
