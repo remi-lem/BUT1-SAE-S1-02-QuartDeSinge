@@ -28,6 +28,7 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
                 agranditMot(mot_manche);
                 agranditMot(mot_propose);
                 longueur_des_mots = longueur_des_mots * 2;
+                //TODO : a 50 char pile ca crash
             }
 
             if (lettre_joueur == '?') {
@@ -156,13 +157,10 @@ void mot_en_majuscules(char* mot) {
 
 void agranditMot(char *&mot) {
     uint taille = strlen(mot);
-    int newTaille = taille * 2;
+    int newTaille = taille + MAX_LETTRES_MOT;
     // Allouer de l'espace mémoire pour le nouveau mot
     char *newMot = new char[newTaille];
     // Copier les caractères du mot dans le nouveau mot
-    //for (int i = 0; i < taille; i++) {
-    //    newMot[i] = mot[i];
-    //}
     strcpy(newMot, mot);
     // Désallouer l'espace mémoire du mot original
     delete[] mot;
