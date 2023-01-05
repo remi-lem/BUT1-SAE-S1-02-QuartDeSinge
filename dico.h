@@ -6,14 +6,8 @@
 #ifndef BUT1_SAE_S1_02_DICO_H
 #define BUT1_SAE_S1_02_DICO_H
 
-/*
- * Remi : problème d'emplacement de l'executable
- * mettre ../ods4 pour compiler dans CLion
- * mettre direct ods4 pour compiler avec g++
-*/
-//TODO : changer avant le rendu
-#define HOME_DICO "../ods4.txt"
-//#define HOME_DICO "ods4.txt"
+// modifier pour CLion en "../ods4.txt"
+#define HOME_DICO "ods4.txt"
 
 #include <iostream>
 #include <fstream> // pour ifstream

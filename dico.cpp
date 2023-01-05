@@ -47,7 +47,7 @@ bool recherche_existence_mot(const char mot[], const ConteneurTDEDico& conteneur
 
 char choix_lettre_robot(const char mot[], const ConteneurTDEDico& conteneur_dico) {
     char mot_dico[MAX_LETTRES_MOT+1];
-    char mot_retour[MAX_LETTRES_MOT+1];
+    //char mot_retour[MAX_LETTRES_MOT+1];
     char random_letter;
     uint debut = 0;
     uint fin = conteneur_dico.nb_it_sto - 1; // pour avoir l'indice
@@ -63,11 +63,13 @@ char choix_lettre_robot(const char mot[], const ConteneurTDEDico& conteneur_dico
         strcpy(mot_dico, lire(conteneur_dico, milieu));
         comparaison = strcmp(mot_dico, mot);
         if(verif_correspondance_mot(mot_dico, mot) && (strlen(mot_dico) > strlen(mot)+1)) {
+            /* amélioration possible :
             strcpy(mot_retour, mot);
             mot_retour[strlen(mot)] = mot_dico[strlen(mot)];
             mot_retour[strlen(mot)+1] = '\0';
-            //if(!recherche_existence_mot(mot_retour, conteneur_dico)) {
-            //malheuresement ralentit trop l'ordi si activé
+            if(!recherche_existence_mot(mot_retour, conteneur_dico)) {
+            -> malheuresement ralentit trop le programme
+            */
                 return mot_dico[strlen(mot)];
             //}
         }
