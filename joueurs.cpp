@@ -7,8 +7,6 @@
 
 void initialiser_struct_joueurs(Joueurs &struct_joueurs, const uint taille_char_args) {
     assert(taille_char_args >= 0);
-    struct_joueurs.nb_robots = 0;
-    struct_joueurs.nb_humains = 0;
     struct_joueurs.nb_total = 0;
     struct_joueurs.indice_dernier_perdant = 0;
     struct_joueurs.ordre_passage = new char[taille_char_args];

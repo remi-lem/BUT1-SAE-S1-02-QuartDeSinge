@@ -34,8 +34,8 @@ void ecrire(ConteneurTDEDico& c, unsigned int i, const Item& it) {
     if (i >= c.capacite) {
         unsigned int newTaille = (i + 1) * c.pasExtension;
         Item* newT = new Item[newTaille];
-        for (unsigned int i = 0; i < c.capacite; ++i)
-            newT[i] = c.tab[i];
+        for (unsigned int j = 0; j < c.capacite; ++j)
+            newT[j] = c.tab[j];
         delete[] c.tab;
         c.tab = newT;
         c.capacite = newTaille;

@@ -8,6 +8,7 @@
 void lancement_partie(Joueurs& struct_joueurs) {
     ConteneurTDEDico conteneur_dico;
     conteneur_dico = dico_dans_conteneur();
+    srand(time(NULL)); // pour le genérateur aléatoire
     while(verif_points_singe(struct_joueurs) == PT_SINGE_OK) {
         lancement_manche(struct_joueurs, conteneur_dico);
         aff_points_singe(struct_joueurs);

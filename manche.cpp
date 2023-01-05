@@ -26,8 +26,7 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
 
             if(strlen(mot_manche) >= longueur_max_mot_manche - 1){
                 //-1 car \0 en fin de chaine
-                agranditMot(mot_manche);
-                longueur_max_mot_manche = longueur_max_mot_manche + MAX_LETTRES_MOT;
+                longueur_max_mot_manche = agranditMot(mot_manche);
             }
 
             if (lettre_joueur == '?') {
@@ -82,8 +81,6 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
             }
         }
     }
-    cerr << "Fin impossible ??" << endl;
-    exit(1);
 }
 
 char recup_aff_lettre(const Joueurs& struct_joueurs, const ConteneurTDEDico& conteneur_dico, const char* mot_manche, const uint indice) {
@@ -150,18 +147,20 @@ void addQuartDeSinge(Joueurs& struct_joueurs, const uint indice) {
 }
 
 void mot_en_majuscules(char* mot) {
-    for(uint i=0; i<strlen(mot); i++) {
+    uint longeur = strlen(mot);
+    for(uint i=0; i<longeur; i++) {
         mot[i] = (char)toupper(mot[i]);
     }
 }
 
-void agranditMot(char *&mot) {
+uint agranditMot(char *&mot) {
     uint taille = strlen(mot);
     uint newTaille = taille + MAX_LETTRES_MOT;
     char *newMot = new char[newTaille];
     strcpy(newMot, mot);
     delete[] mot;
     mot = newMot;
+    return newTaille;
 }
 
 char* ajoute_lettre_au_mot(char mot_manche[], const char lettre_joueur) {

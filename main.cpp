@@ -50,7 +50,8 @@ int traitement_arguments(const int argc, const char* argv[], Joueurs& struct_jou
 
     initialiser_struct_joueurs(struct_joueurs, taille_char_args);
     if (argc >= 2) {
-        for (uint i = 0; i < strlen(argv[1]); i++) {
+        uint longueur_argv1 = strlen(argv[1]);
+        for (uint i = 0; i < longueur_argv1; i++) {
             lettre_arg = (char)toupper(argv[1][i]);
             switch(lettre_arg) {
                 case('H'):
@@ -70,8 +71,6 @@ int traitement_arguments(const int argc, const char* argv[], Joueurs& struct_jou
         return NB_JOUEURS_PAS_CORRECT;
     }
 
-    struct_joueurs.nb_humains = cpt_humain;
-    struct_joueurs.nb_robots = cpt_robot;
     struct_joueurs.nb_total = cpt_humain + cpt_robot;
     return CORRECT;
 }

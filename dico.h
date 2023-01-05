@@ -31,6 +31,11 @@ enum {
     MAX_LETTRES_MOT = 25
 };
 
+enum {
+    CAPA_CONTENEUR_DICO = 100,
+    PAS_CONTENEUR_DICO = 2
+};
+
 /**
  * @brief Enregistrement du dictionnaire dans un ConteneurTDEDico
  * @return le conteneurTDE qui contient le dictionnaire

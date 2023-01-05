@@ -59,8 +59,9 @@ void mot_en_majuscules(char* mot);
 /**
  * @brief Agrandir le mot d'une certaine taille
  * @param mot le mot à agrandir
+ * @return la nouvelle taille max du mot
  */
-void agranditMot(char *&mot);
+uint agranditMot(char *&mot);
 
 /**
  * @brief Ajout d'une lettre au mot actuel
