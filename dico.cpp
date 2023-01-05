@@ -75,7 +75,7 @@ char choix_lettre_robot(const char mot[], const ConteneurTDEDico& conteneur_dico
             mot_retour[strlen(mot)] = mot_dico[strlen(mot)];
             mot_retour[strlen(mot)+1] = '\0';
             //if(!recherche_existence_mot(mot_retour, conteneur_dico)) {
-            //TODO ordi qui décole quand c'est activé
+            //TODO malheuresement ralentit trop quand activé
                 return mot_dico[strlen(mot)];
             //}
         }

@@ -25,7 +25,6 @@ void lancement_manche(Joueurs& struct_joueurs, ConteneurTDEDico& conteneur_dico)
             lettre_joueur = recup_aff_lettre(struct_joueurs, conteneur_dico, mot_manche, i);
 
             if(strlen(mot_manche) >= longueur_max_mot_manche - 1){
-                //TODO : mettre dans ajoute_lettre_au_mot ?
                 //-1 car \0 en fin de chaine
                 agranditMot(mot_manche);
                 longueur_max_mot_manche = longueur_max_mot_manche + MAX_LETTRES_MOT;
