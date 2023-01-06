@@ -1,1 +1,1 @@
-g++ conteneurTDEdico.cpp dico.cpp joueurs.cpp manche.cpp partie.cpp main.cpp -o programo && ./programo HHHHHH < ./in-out/in.txt > ./in-out/sortieremi.txt && diff -sqy ./in-out/out.txt ./in-out/sortieremi.txt
+g++ joueurs.cpp conteneurTDEdico.cpp dico.cpp manche.cpp partie.cpp main.cpp -o programo && ./programo HHHHHH < ./in-out/in.txt > ./in-out/sortieremi.txt && diff -sqy ./in-out/out.txt ./in-out/sortieremi.txt

@@ -9,7 +9,6 @@
 #include <cassert>
 #include <climits>
 
-#include "joueurs.h"
 #include "dico.h"
 
 /**
