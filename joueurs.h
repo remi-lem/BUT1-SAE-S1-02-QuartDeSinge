@@ -63,7 +63,6 @@ const int MIN_JOUEURS = 2;
  */
 void initialiser_struct_joueurs(Joueurs &struct_joueurs, const uint taille_char_args);
 
-
 /**
  * @brief Recherche de l'indice du joueur précédent
  * @param[in] struct_joueurs une référence vers la structure des étudiants

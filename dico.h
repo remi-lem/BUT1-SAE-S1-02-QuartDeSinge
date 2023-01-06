@@ -25,6 +25,9 @@ enum {
     MAX_LETTRES_MOT = 25
 };
 
+/**
+ * @brief capacité et pas d'extension du conteneur
+ */
 enum {
     CAPA_CONTENEUR_DICO = 100,
     PAS_CONTENEUR_DICO = 2

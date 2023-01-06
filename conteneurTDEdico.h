@@ -8,6 +8,10 @@
 
 #include "joueurs.h"
 
+/**
+ * @brief définition d'un Item en tant que char* afin qu'il puisse
+ * pointer vers le premier caractère d'une chaine de caractères
+ */
 typedef char* Item;
 
 /** @brief Conteneur d'items alloués en mémoire dynamique
